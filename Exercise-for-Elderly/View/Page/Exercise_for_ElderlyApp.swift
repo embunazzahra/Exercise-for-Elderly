@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct Exercise_for_ElderlyApp: App {
     var body: some Scene {
+        let viewModelFactory = ViewModelFactory()
+        
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
         }
     }
 }
