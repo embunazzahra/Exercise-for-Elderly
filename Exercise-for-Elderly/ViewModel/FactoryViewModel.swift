@@ -8,16 +8,16 @@
 import Foundation
 
 class ViewModelFactory: ObservableObject {
-    let userController = UserController(dataSource: .shared)
-    let eventController = EventController(dataSource: .shared)
-    
-    func makeCreateEventViewModel() -> CreateEventViewModel {
-        return CreateEventViewModel(eventController: eventController)
-    }
-    
-    func makeUserProfileViewModel() -> UserProfileViewModel {
-        return UserProfileViewModel(userController: userController)
-    }
+//    let userController = UserController(dataSource: .shared)
+//    let eventController = EventController(dataSource: .shared)
+//    
+//    func makeCreateEventViewModel() -> CreateEventViewModel {
+//        return CreateEventViewModel(eventController: eventController)
+//    }
+//    
+//    func makeUserProfileViewModel() -> UserProfileViewModel {
+//        return UserProfileViewModel(userController: userController)
+//    }
     
     //another view model maker
     

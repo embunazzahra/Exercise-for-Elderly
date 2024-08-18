@@ -13,7 +13,8 @@ struct Exercise_for_ElderlyApp: App {
         let viewModelFactory = ViewModelFactory()
         
         WindowGroup {
-            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
+//            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
+            Join()
         }
     }
 }
