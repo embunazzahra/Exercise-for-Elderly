@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432985792C6F9E0400833788 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985782C6F9E0400833788 /* Create.swift */; };
+		4329857C2C6FA21A00833788 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329857B2C6FA21A00833788 /* Button.swift */; };
+		432985802C70417D00833788 /* texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329857F2C70417D00833788 /* texts.swift */; };
+		432985822C70421700833788 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985812C70421700833788 /* SwiftUIView.swift */; };
+		432985842C7042A400833788 /* passwordTextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985832C7042A400833788 /* passwordTextBox.swift */; };
+		432985862C7042CB00833788 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985852C7042CB00833788 /* Join.swift */; };
+		432985882C70489B00833788 /* passwordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985872C70489B00833788 /* passwordField.swift */; };
+		4329858A2C70495100833788 /* moveToWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985892C70495100833788 /* moveToWatch.swift */; };
 		713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */; };
 		713234772C69B04000C1AC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234762C69B04000C1AC5D /* ContentView.swift */; };
 		713234792C69B04100C1AC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713234782C69B04100C1AC5D /* Assets.xcassets */; };
@@ -19,9 +27,21 @@
 		713234962C69BA3B00C1AC5D /* FactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */; };
 		713234982C69BEC200C1AC5D /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */; };
 		7132349A2C69C07B00C1AC5D /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */; };
+		D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */; };
+		D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C202C71E47D008B766C /* ShowAgeInformation.swift */; };
+		D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* PasswordPage.swift */; };
+		D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C242C71E4F0008B766C /* ExtensionColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		432985782C6F9E0400833788 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
+		4329857B2C6FA21A00833788 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		4329857F2C70417D00833788 /* texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = texts.swift; sourceTree = "<group>"; };
+		432985812C70421700833788 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		432985832C7042A400833788 /* passwordTextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordTextBox.swift; sourceTree = "<group>"; };
+		432985852C7042CB00833788 /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		432985872C70489B00833788 /* passwordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordField.swift; sourceTree = "<group>"; };
+		432985892C70495100833788 /* moveToWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToWatch.swift; sourceTree = "<group>"; };
 		713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise-for-Elderly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise_for_ElderlyApp.swift; sourceTree = "<group>"; };
 		713234762C69B04000C1AC5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +56,10 @@
 		713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
 		713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Exercise-for-Elderly.entitlements"; sourceTree = "<group>"; };
+		D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleID.swift; sourceTree = "<group>"; };
+		D6640C202C71E47D008B766C /* ShowAgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAgeInformation.swift; sourceTree = "<group>"; };
+		D6640C222C71E4B4008B766C /* PasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPage.swift; sourceTree = "<group>"; };
+		D6640C242C71E4F0008B766C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionColor.swift; path = "Exercise-for-Elderly/View/Page/ExtensionColor.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +73,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4329857A2C6FA20F00833788 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4329857B2C6FA21A00833788 /* Button.swift */,
+				4329857F2C70417D00833788 /* texts.swift */,
+				432985812C70421700833788 /* SwiftUIView.swift */,
+				432985832C7042A400833788 /* passwordTextBox.swift */,
+				432985872C70489B00833788 /* passwordField.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		713234682C69B04000C1AC5D = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +129,7 @@
 		713234822C69B14700C1AC5D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				713234892C69B1C700C1AC5D /* Component */,
+				4329857A2C6FA20F00833788 /* Component */,
 				713234882C69B1B900C1AC5D /* Page */,
 			);
 			path = View;
@@ -136,6 +172,7 @@
 		713234872C69B17E00C1AC5D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D6640C242C71E4F0008B766C /* ExtensionColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -145,15 +182,14 @@
 			children = (
 				713234762C69B04000C1AC5D /* ContentView.swift */,
 				713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */,
+				D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */,
+				D6640C202C71E47D008B766C /* ShowAgeInformation.swift */,
+				D6640C222C71E4B4008B766C /* PasswordPage.swift */,
+				432985782C6F9E0400833788 /* Create.swift */,
+				432985852C7042CB00833788 /* Join.swift */,
+				432985892C70495100833788 /* moveToWatch.swift */,
 			);
 			path = Page;
-			sourceTree = "<group>";
-		};
-		713234892C69B1C700C1AC5D /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		7132348A2C69B28D00C1AC5D /* Controller */ = {
@@ -236,15 +272,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				713234922C69B84E00C1AC5D /* CloudKitService.swift in Sources */,
+				4329858A2C70495100833788 /* moveToWatch.swift in Sources */,
 				7132348E2C69B4CD00C1AC5D /* Event.swift in Sources */,
+				D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */,
+				D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */,
 				713234772C69B04000C1AC5D /* ContentView.swift in Sources */,
 				713234902C69B6E000C1AC5D /* UserController.swift in Sources */,
 				713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */,
+				432985862C7042CB00833788 /* Join.swift in Sources */,
+				D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */,
 				713234982C69BEC200C1AC5D /* CreateEventViewModel.swift in Sources */,
 				713234962C69BA3B00C1AC5D /* FactoryViewModel.swift in Sources */,
+				432985842C7042A400833788 /* passwordTextBox.swift in Sources */,
+				4329857C2C6FA21A00833788 /* Button.swift in Sources */,
+				D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */,
+				432985822C70421700833788 /* SwiftUIView.swift in Sources */,
+				432985792C6F9E0400833788 /* Create.swift in Sources */,
+				432985802C70417D00833788 /* texts.swift in Sources */,
 				7132349A2C69C07B00C1AC5D /* UserProfileViewModel.swift in Sources */,
 				713234942C69B99F00C1AC5D /* EventController.swift in Sources */,
 				7132348C2C69B2BC00C1AC5D /* User.swift in Sources */,
+				432985882C70489B00833788 /* passwordField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -387,6 +435,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -417,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
