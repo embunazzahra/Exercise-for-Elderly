@@ -15,11 +15,10 @@ struct Exercise_for_ElderlyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
-        let viewModelFactory = ViewModelFactory()
-        
         WindowGroup {
-//            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
             Join()
+//            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
+//            TestAPIView()
         }
     }
 }
