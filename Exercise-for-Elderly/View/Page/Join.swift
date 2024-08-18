@@ -8,39 +8,65 @@
 import SwiftUI
 
 struct Join: View {
-        
-    @State private var password: String = ""
-    
+    @State private var codes: [String] = Array(repeating: "", count: 4)
+    @State private var isFirstResponders: [Bool] = [true, false, false, false]
+    @State private var concatenatedCodes: String = ""
+
+    // Computed property to concatenate codes
+    private var concatenatedCodesString: String {
+        codes.joined()
+    }
+
     var body: some View {
-                
         NavigationStack {
             VStack {
                 PasswordDescription(title: joinTitle, desc: joinDesc)
+
+                VerficationCodeView(
+                    codes: $codes,
+                    isFirstResponders: $isFirstResponders
+                )
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+
+                Spacer()
+
+                // Display concatenated codes
+                if !concatenatedCodes.isEmpty {
+                    VStack {
+                        Text("Concatenated Codes:")
+                            .font(.headline)
+                        Text(concatenatedCodes)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+                    }
+                    .padding(.top, 20)
+                }
                 
-                PasswordField(password: $password)
-                
+                HStack {
+                    Text("1")
+                        .font(.system(size: 24))
+                        .fontWeight(.medium)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+                    Image(systemName: "person.fill")
+                        .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+                }
+                .frame(width: 343, alignment: .top)
+
+                ButtoniOS(text: "Start", isPressed: false)
             }
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-            Spacer()
-            
-            // Example usage with true condition
-            HStack {
-                Text("1")
-                    .font(.system(size: 24))
-                .fontWeight(.medium)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
-                Image(systemName: "person.fill")
-                    .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+            .padding(.vertical, 100)
+            .onChange(of: codes) { newCodes in
+                // Update concatenatedCodes when codes change
+                concatenatedCodes = concatenatedCodesString
             }
-            .frame(width: 343, alignment: .top)
-            
-            ButtoniOS(text: "Start", isPressed: false)
         }
-        .padding(.vertical, 100)
     }
 }
 
 #Preview {
     Join()
 }
+
+
