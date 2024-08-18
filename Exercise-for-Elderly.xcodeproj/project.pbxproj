@@ -27,7 +27,36 @@
 		713234962C69BA3B00C1AC5D /* FactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */; };
 		713234982C69BEC200C1AC5D /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */; };
 		7132349A2C69C07B00C1AC5D /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */; };
+		714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */; };
+		714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F3ED12C719264004A1CA4 /* ContentView.swift */; };
+		714F3ED42C719266004A1CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED32C719266004A1CA4 /* Assets.xcassets */; };
+		714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */; };
+		714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		714F3ED82C719266004A1CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713234692C69B04000C1AC5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 714F3ECC2C719264004A1CA4;
+			remoteInfo = "ExerciseWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		714F3EDE2C719266004A1CA4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		432985782C6F9E0400833788 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
@@ -51,11 +80,23 @@
 		713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryViewModel.swift; sourceTree = "<group>"; };
 		713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
 		713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExerciseWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseWatchApp.swift; sourceTree = "<group>"; };
+		714F3ED12C719264004A1CA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		714F3ED32C719266004A1CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Exercise-for-Elderly.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7132346E2C69B04000C1AC5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		714F3ECA2C719264004A1CA4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				713234732C69B04000C1AC5D /* Exercise-for-Elderly */,
+				714F3ECE2C719264004A1CA4 /* ExerciseWatch Watch App */,
 				713234722C69B04000C1AC5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */,
+				714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +232,25 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		714F3ECE2C719264004A1CA4 /* ExerciseWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */,
+				714F3ED12C719264004A1CA4 /* ContentView.swift */,
+				714F3ED32C719266004A1CA4 /* Assets.xcassets */,
+				714F3ED52C719266004A1CA4 /* Preview Content */,
+			);
+			path = "ExerciseWatch Watch App";
+			sourceTree = "<group>";
+		};
+		714F3ED52C719266004A1CA4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,14 +261,33 @@
 				7132346D2C69B04000C1AC5D /* Sources */,
 				7132346E2C69B04000C1AC5D /* Frameworks */,
 				7132346F2C69B04000C1AC5D /* Resources */,
+				714F3EDE2C719266004A1CA4 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				714F3ED92C719266004A1CA4 /* PBXTargetDependency */,
+			);
+			name = "Exercise-for-Elderly";
+			productName = "Exercise-for-Elderly";
+			productReference = 713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 714F3EDB2C719266004A1CA4 /* Build configuration list for PBXNativeTarget "ExerciseWatch Watch App" */;
+			buildPhases = (
+				714F3EC92C719264004A1CA4 /* Sources */,
+				714F3ECA2C719264004A1CA4 /* Frameworks */,
+				714F3ECB2C719264004A1CA4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Exercise-for-Elderly";
-			productName = "Exercise-for-Elderly";
-			productReference = 713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */;
+			name = "ExerciseWatch Watch App";
+			productName = "ExerciseWatch Watch App";
+			productReference = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -220,6 +301,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					713234702C69B04000C1AC5D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					714F3ECC2C719264004A1CA4 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -238,6 +322,7 @@
 			projectRoot = "";
 			targets = (
 				713234702C69B04000C1AC5D /* Exercise-for-Elderly */,
+				714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +334,15 @@
 			files = (
 				7132347C2C69B04100C1AC5D /* Preview Assets.xcassets in Resources */,
 				713234792C69B04100C1AC5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		714F3ECB2C719264004A1CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */,
+				714F3ED42C719266004A1CA4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +374,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		714F3EC92C719264004A1CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */,
+				714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		714F3ED92C719266004A1CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */;
+			targetProxy = 714F3ED82C719266004A1CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7132347D2C69B04100C1AC5D /* Debug */ = {
@@ -405,6 +516,7 @@
 		713234802C69B04100C1AC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Exercise-for-Elderly/Exercise-for-Elderly.entitlements";
@@ -436,6 +548,7 @@
 		713234812C69B04100C1AC5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Exercise-for-Elderly/Exercise-for-Elderly.entitlements";
@@ -464,6 +577,66 @@
 			};
 			name = Release;
 		};
+		714F3EDC2C719266004A1CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		714F3EDD2C719266004A1CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -481,6 +654,15 @@
 			buildConfigurations = (
 				713234802C69B04100C1AC5D /* Debug */,
 				713234812C69B04100C1AC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		714F3EDB2C719266004A1CA4 /* Build configuration list for PBXNativeTarget "ExerciseWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				714F3EDC2C719266004A1CA4 /* Debug */,
+				714F3EDD2C719266004A1CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
