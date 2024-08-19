@@ -8,34 +8,60 @@
 import SwiftUI
 
 struct Create: View {
+    @EnvironmentObject var viewModel: ExerciseRoomViewModel
+
     var body: some View {
         
-        let randomString = generateRandomFourDigitNumberString()
         
-        NavigationStack {
-            VStack {
-                PasswordDescription(title: createTitle, desc: createDesc)
+        //        let randomString = generateRandomFourDigitNumberString()
+        VStack{
+            if viewModel.isLoading {
+                VStack {
+                    ProgressView("Generating Invite Code...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .font(.title2)
+                        .padding()
+                }
+            } else{
+                VStack {
+                    PasswordDescription(title: createTitle, desc: createDesc)
+                    
+                    PasswordTextBox(password: viewModel.exerciseRoom?.inviteCode ?? "0000")
+                }
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+                Spacer()
                 
-                PasswordTextBox(password: randomString)
+                // Example usage with true condition
+                HStack {
+                    Text("1")
+                        .font(.system(size: 24))
+                        .fontWeight(.medium)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+                    Image(systemName: "person.fill")
+                        .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
+                }
+                .frame(width: 343, alignment: .top)
+                
+                NavigationLink(
+                    destination: moveToWatch().environmentObject(viewModel)
+                    
+                ) {
+                    ButtoniOS(text: "Start", isPressed: true)
+                }
             }
-            .frame(maxWidth: .infinity, alignment: .topLeading)
-            Spacer()
-            
-            // Example usage with true condition
-            HStack {
-                Text("1")
-                    .font(.system(size: 24))
-                .fontWeight(.medium)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
-                Image(systemName: "person.fill")
-                    .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
-            }
-            .frame(width: 343, alignment: .top)
-            
-            ButtoniOS(text: "Start", isPressed: true)
         }
-        .padding(.vertical, 100)
+        .onAppear {
+            generateInviteCode()
+        }
+    }
+    
+    private func generateInviteCode() {
+        viewModel.isLoading = true
+        viewModel.generateInviteCode {
+            // Hide the loading indicator once the invite code is generated
+            viewModel.isLoading = false
+        }
     }
 }
 
@@ -46,5 +72,5 @@ func generateRandomFourDigitNumberString() -> String {
 }
 
 #Preview {
-    Create()
+    Create().environmentObject(ExerciseRoomViewModel())
 }

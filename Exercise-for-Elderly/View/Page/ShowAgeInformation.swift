@@ -47,9 +47,14 @@ struct ShowAgeInformation: View {
 //                        .foregroundColor(.white)
 //                        .cornerRadius(50)
 //                }
-                ButtoniOS(text: "Next", isPressed: true)
-                .padding(.top, 20)
-                .padding(.bottom, 90)
+//                
+                NavigationLink(
+                    destination: MenuPage()
+                                ) {
+                                    ButtoniOS(text: "Next", isPressed: true)
+                                        .padding(.top, 20)
+                                        .padding(.bottom, 90)
+                                }
             }
             .padding()
         }
