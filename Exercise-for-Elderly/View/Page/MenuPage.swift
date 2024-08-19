@@ -99,8 +99,9 @@
 //}
 import SwiftUI
 
-struct PasswordPage: View {
+struct MenuPage: View {
     @State private var selectedOption: String? = nil
+    @StateObject private var viewModel = ExerciseRoomViewModel()
     
     var body: some View {
         
@@ -169,7 +170,7 @@ struct PasswordPage: View {
                 // Conditional NavigationLink
                 if let option = selectedOption {
                     NavigationLink(
-                        destination: destinationView(for: option)
+                        destination: destinationView(for: option).environmentObject(viewModel)
                     ) {
                         ButtoniOS(text: "Start", isPressed: true)
                     }
@@ -188,17 +189,17 @@ struct PasswordPage: View {
     
     
     // Function to return the appropriate destination view
-    @ViewBuilder
-    func destinationView(for option: String) -> some View {
-        if option == "Join" {
-            Join() // Replace with your actual Join view
-        } else {
-            Create() // Replace with your actual Create view
-        }
-    }
+       @ViewBuilder
+       func destinationView(for option: String) -> some View {
+           if option == "Join" {
+               Join() // Replace with your actual Join view
+           } else {
+               Create() // Replace with your actual Create view
+           }
+       }
 }
 
 #Preview {
-    PasswordPage()
+    MenuPage()
 }
 

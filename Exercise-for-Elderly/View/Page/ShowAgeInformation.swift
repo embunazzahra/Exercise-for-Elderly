@@ -49,7 +49,7 @@ struct ShowAgeInformation: View {
 //                }
 //                
                 NavigationLink(
-                    destination: PasswordPage()
+                    destination: MenuPage()
                                 ) {
                                     ButtoniOS(text: "Next", isPressed: true)
                                         .padding(.top, 20)

@@ -15,7 +15,7 @@ struct TestAPIView: View {
                     .padding()
             } else {
                 Button(action: {
-                         viewModel.generateInviteCode()
+                    viewModel.generateInviteCode(completion: {})
                 }) {
                     Text("Generate Code")
                         .font(.title)

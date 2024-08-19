@@ -40,7 +40,7 @@
 		C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */; };
 		D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */; };
 		D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C202C71E47D008B766C /* ShowAgeInformation.swift */; };
-		D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* PasswordPage.swift */; };
+		D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* MenuPage.swift */; };
 		D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C242C71E4F0008B766C /* ExtensionColor.swift */; };
 		FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */; };
 /* End PBXBuildFile section */
@@ -107,7 +107,7 @@
 		9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-for-Elderly.release.xcconfig"; path = "Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly.release.xcconfig"; sourceTree = "<group>"; };
 		D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleID.swift; sourceTree = "<group>"; };
 		D6640C202C71E47D008B766C /* ShowAgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAgeInformation.swift; sourceTree = "<group>"; };
-		D6640C222C71E4B4008B766C /* PasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPage.swift; sourceTree = "<group>"; };
+		D6640C222C71E4B4008B766C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
 		D6640C242C71E4F0008B766C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionColor.swift; path = "Exercise-for-Elderly/View/Page/ExtensionColor.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -258,7 +258,7 @@
 				713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */,
 				D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */,
 				D6640C202C71E47D008B766C /* ShowAgeInformation.swift */,
-				D6640C222C71E4B4008B766C /* PasswordPage.swift */,
+				D6640C222C71E4B4008B766C /* MenuPage.swift */,
 				432985782C6F9E0400833788 /* Create.swift */,
 				432985852C7042CB00833788 /* Join.swift */,
 				432985892C70495100833788 /* moveToWatch.swift */,
@@ -489,7 +489,7 @@
 				713234962C69BA3B00C1AC5D /* (null) in Sources */,
 				432985842C7042A400833788 /* passwordTextBox.swift in Sources */,
 				4329857C2C6FA21A00833788 /* Button.swift in Sources */,
-				D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */,
+				D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */,
 				432985822C70421700833788 /* SwiftUIView.swift in Sources */,
 				43F945C72C72298500599111 /* VerficationTextField.swift in Sources */,
 				432985792C6F9E0400833788 /* Create.swift in Sources */,

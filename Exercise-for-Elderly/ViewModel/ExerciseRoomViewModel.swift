@@ -22,10 +22,10 @@ class ExerciseRoomViewModel: ObservableObject {
     init() {
         firebaseService.$exerciseRoom
             .assign(to: &$exerciseRoom)
+        print("view model watching the exercise room..")
     }
     
-    
-    func generateInviteCode() {
+    func generateInviteCode(completion: @escaping () -> Void) {
         Task {
             let result = await firebaseService.createNewRoom()
             switch result {
@@ -38,6 +38,7 @@ class ExerciseRoomViewModel: ObservableObject {
                 self.errorMessage = "Error generating invite code: \(error.localizedDescription)"
                 self.showError = true
             }
+            completion()
         }
     }
     

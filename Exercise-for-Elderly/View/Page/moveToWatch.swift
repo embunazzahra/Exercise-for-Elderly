@@ -9,7 +9,7 @@ import SwiftUI
 
 struct moveToWatch: View {
     var body: some View {
-        NavigationStack{
+       
             VStack{
                 Text("Time to Get Moving!")
                     .font(.largeTitle)
@@ -38,7 +38,7 @@ struct moveToWatch: View {
                 .padding()
             }
             .padding()
-        }
+        
     }
 }
 

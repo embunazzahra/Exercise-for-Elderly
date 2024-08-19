@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Join: View {
+    @EnvironmentObject var viewModel: ExerciseRoomViewModel
     @State private var codes: [String] = Array(repeating: "", count: 4)
     @State private var isFirstResponders: [Bool] = [true, false, false, false]
     @State private var concatenatedCodes: String = ""
@@ -66,7 +67,7 @@ struct Join: View {
 }
 
 #Preview {
-    Join()
+    Join().environmentObject(ExerciseRoomViewModel())
 }
 
 

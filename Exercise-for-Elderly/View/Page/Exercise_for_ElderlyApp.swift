@@ -26,11 +26,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Configure Firebase
         FirebaseApp.configure()
-
+        
         // Optional: Set up other services or configurations
         return true
     }
-
+    
     // Optional: Handle other app delegate methods if needed
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
