@@ -98,14 +98,50 @@
 //    PasswordPage()
 //}
 import SwiftUI
+import HealthKit
 
 struct MenuPage: View {
     @State private var selectedOption: String? = nil
     @StateObject private var viewModel = ExerciseRoomViewModel()
+    @ObservedObject var healthVM: HealthUserDataViewModel
     
     var body: some View {
         
             VStack(alignment: .center, spacing: 15) {
+                // Profile Section
+                HStack {
+                    Image(systemName: "person.crop.circle")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.tealcustom)
+                                
+                    VStack(alignment: .leading) {
+                        Text("Lucas")
+                            .font(.system(size: 22))
+                            .fontWeight(.semibold)
+                            .padding(.leading, 5)
+                                    
+                                    // Max BPM
+                        if let maxBPM = healthVM.maxHeartRate {
+                            Text("Max: \(Int(maxBPM)) BPM")
+                                .font(.system(size: 16))
+                                .foregroundColor(.gray)
+                                .padding(.leading, 5)
+                        } else {
+                            Text("Max BPM: Not Available")
+                                .font(.system(size: 16))
+                                .foregroundColor(.gray)
+                                .padding(.leading, 5)
+                        }
+                        
+
+                            }
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                        .padding(.bottom, 55)
+
+                
                 Text("Connect with Friends")
                     .font(.system(size: 32))
                     .fontWeight(.bold)
@@ -117,7 +153,8 @@ struct MenuPage: View {
                     .padding(.bottom, 50)
                 
                 // Create Button
-                NavigationLink(destination: ShowAgeInformation()) {
+                NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
+                ){
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Create")
                             .font(.system(size: 24))
@@ -142,8 +179,8 @@ struct MenuPage: View {
                 .padding(.bottom, 10)
                 
                 // Join Button
-                NavigationLink(destination: ShowAgeInformation()
-                ) {
+                NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
+                ){
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Join")
                             .font(.system(size: 24))
@@ -182,6 +219,7 @@ struct MenuPage: View {
                         .padding(.bottom, 10)
                         .disabled(true)
                 }
+                
             }
             .padding()
         
@@ -200,6 +238,6 @@ struct MenuPage: View {
 }
 
 #Preview {
-    MenuPage()
+    MenuPage(healthVM: HealthUserDataViewModel(healthStore: HKHealthStore()))
 }
 
