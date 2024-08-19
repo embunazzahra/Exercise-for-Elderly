@@ -5,21 +5,11 @@
 //  Created by Dhau Embun Azzahra on 12/08/24.
 //
 
-import CloudKit
+import Foundation
 
-final class User {
-    let record: String
-    let recordID: Int
+
+struct User {
     var username: String
-    var email: String
-    var createdEvent: [Event]
-    
-    init(record: String, recordID: Int, username: String, email: String, createdEvent: [Event]) {
-        self.record = record
-        self.recordID = recordID
-        self.username = username
-        self.email = email
-        self.createdEvent = createdEvent
-    }
-    
+    var birth: Date
+    var maxBPM: Int
 }

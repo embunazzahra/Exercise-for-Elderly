@@ -22,20 +22,58 @@
 		713234792C69B04100C1AC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713234782C69B04100C1AC5D /* Assets.xcassets */; };
 		7132347C2C69B04100C1AC5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7132347B2C69B04100C1AC5D /* Preview Assets.xcassets */; };
 		7132348C2C69B2BC00C1AC5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132348B2C69B2BC00C1AC5D /* User.swift */; };
-		7132348E2C69B4CD00C1AC5D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132348D2C69B4CD00C1AC5D /* Event.swift */; };
 		713234902C69B6E000C1AC5D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132348F2C69B6E000C1AC5D /* UserController.swift */; };
-		713234922C69B84E00C1AC5D /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234912C69B84E00C1AC5D /* CloudKitService.swift */; };
 		713234942C69B99F00C1AC5D /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234932C69B99F00C1AC5D /* EventController.swift */; };
-		713234962C69BA3B00C1AC5D /* FactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */; };
-		713234982C69BEC200C1AC5D /* CreateEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */; };
-		7132349A2C69C07B00C1AC5D /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */; };
+		713BF7322C71A082008C0CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713BF7312C71A082008C0CED /* GoogleService-Info.plist */; };
+		713BF7342C71AAD3008C0CED /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7332C71AAD3008C0CED /* FirebaseService.swift */; };
+		713BF7362C71AB3C008C0CED /* ExerciseRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7352C71AB3C008C0CED /* ExerciseRoom.swift */; };
+		713BF7382C71AE77008C0CED /* TestAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7372C71AE77008C0CED /* TestAPIView.swift */; };
+		713BF73A2C71B493008C0CED /* ExerciseRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7392C71B493008C0CED /* ExerciseRoomViewModel.swift */; };
+		714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */; };
+		714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714F3ED12C719264004A1CA4 /* ContentView.swift */; };
+		714F3ED42C719266004A1CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED32C719266004A1CA4 /* Assets.xcassets */; };
+		714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */; };
+		714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */; };
 		D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */; };
 		D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C202C71E47D008B766C /* ShowAgeInformation.swift */; };
-		D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* PasswordPage.swift */; };
+		D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* MenuPage.swift */; };
 		D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C242C71E4F0008B766C /* ExtensionColor.swift */; };
+		D6640C882C732EAD008B766C /* HealthUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C872C732EAD008B766C /* HealthUserData.swift */; };
+		D6640C8E2C735638008B766C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6640C8D2C735638008B766C /* Info.plist */; };
+		FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		714F3ED82C719266004A1CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 713234692C69B04000C1AC5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 714F3ECC2C719264004A1CA4;
+			remoteInfo = "ExerciseWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		714F3EDE2C719266004A1CA4 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExerciseWatch_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A61F23A3364ED073660D3A /* Pods-Exercise-for-Elderly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-for-Elderly.debug.xcconfig"; path = "Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly.debug.xcconfig"; sourceTree = "<group>"; };
+		263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exercise_for_Elderly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF47B5AEBA4142374464341 /* Pods-ExerciseWatch Watch App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseWatch Watch App.debug.xcconfig"; path = "Target Support Files/Pods-ExerciseWatch Watch App/Pods-ExerciseWatch Watch App.debug.xcconfig"; sourceTree = "<group>"; };
+		4292215A524314A5D43D3D30 /* Pods-ExerciseWatch Watch App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExerciseWatch Watch App.release.xcconfig"; path = "Target Support Files/Pods-ExerciseWatch Watch App/Pods-ExerciseWatch Watch App.release.xcconfig"; sourceTree = "<group>"; };
 		432985782C6F9E0400833788 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		4329857B2C6FA21A00833788 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4329857F2C70417D00833788 /* texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = texts.swift; sourceTree = "<group>"; };
@@ -52,18 +90,26 @@
 		713234782C69B04100C1AC5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7132347B2C69B04100C1AC5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7132348B2C69B2BC00C1AC5D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		7132348D2C69B4CD00C1AC5D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		7132348F2C69B6E000C1AC5D /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		713234912C69B84E00C1AC5D /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
 		713234932C69B99F00C1AC5D /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
-		713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryViewModel.swift; sourceTree = "<group>"; };
-		713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewModel.swift; sourceTree = "<group>"; };
-		713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		713BF7312C71A082008C0CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		713BF7332C71AAD3008C0CED /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		713BF7352C71AB3C008C0CED /* ExerciseRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoom.swift; sourceTree = "<group>"; };
+		713BF7372C71AE77008C0CED /* TestAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIView.swift; sourceTree = "<group>"; };
+		713BF7392C71B493008C0CED /* ExerciseRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRoomViewModel.swift; sourceTree = "<group>"; };
+		714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExerciseWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseWatchApp.swift; sourceTree = "<group>"; };
+		714F3ED12C719264004A1CA4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		714F3ED32C719266004A1CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Exercise-for-Elderly.entitlements"; sourceTree = "<group>"; };
+		9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-for-Elderly.release.xcconfig"; path = "Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly.release.xcconfig"; sourceTree = "<group>"; };
 		D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleID.swift; sourceTree = "<group>"; };
 		D6640C202C71E47D008B766C /* ShowAgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAgeInformation.swift; sourceTree = "<group>"; };
-		D6640C222C71E4B4008B766C /* PasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPage.swift; sourceTree = "<group>"; };
+		D6640C222C71E4B4008B766C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
 		D6640C242C71E4F0008B766C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionColor.swift; path = "Exercise-for-Elderly/View/Page/ExtensionColor.swift"; sourceTree = SOURCE_ROOT; };
+		D6640C872C732EAD008B766C /* HealthUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthUserData.swift; sourceTree = "<group>"; };
+		D6640C8D2C735638008B766C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +117,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		714F3ECA2C719264004A1CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3930A39B68B38C533E5AF283 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18A61F23A3364ED073660D3A /* Pods-Exercise-for-Elderly.debug.xcconfig */,
+				9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */,
+				2CF47B5AEBA4142374464341 /* Pods-ExerciseWatch Watch App.debug.xcconfig */,
+				4292215A524314A5D43D3D30 /* Pods-ExerciseWatch Watch App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4329857A2C6FA20F00833788 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				713234732C69B04000C1AC5D /* Exercise-for-Elderly */,
+				714F3ECE2C719264004A1CA4 /* ExerciseWatch Watch App */,
 				713234722C69B04000C1AC5D /* Products */,
+				3930A39B68B38C533E5AF283 /* Pods */,
+				A313BCB9AC84CFF85A135737 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */,
+				714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +180,8 @@
 		713234732C69B04000C1AC5D /* Exercise-for-Elderly */ = {
 			isa = PBXGroup;
 			children = (
+				D6640C8D2C735638008B766C /* Info.plist */,
+				713BF7312C71A082008C0CED /* GoogleService-Info.plist */,
 				715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */,
 				7132348A2C69B28D00C1AC5D /* Controller */,
 				713234872C69B17E00C1AC5D /* Extension */,
@@ -145,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				7132348B2C69B2BC00C1AC5D /* User.swift */,
-				7132348D2C69B4CD00C1AC5D /* Event.swift */,
+				713BF7352C71AB3C008C0CED /* ExerciseRoom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,9 +225,8 @@
 		713234842C69B15E00C1AC5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				713234952C69BA3B00C1AC5D /* FactoryViewModel.swift */,
-				713234972C69BEC200C1AC5D /* CreateEventViewModel.swift */,
-				713234992C69C07B00C1AC5D /* UserProfileViewModel.swift */,
+				713BF7392C71B493008C0CED /* ExerciseRoomViewModel.swift */,
+				D6640C872C732EAD008B766C /* HealthUserData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -163,7 +234,7 @@
 		713234852C69B16A00C1AC5D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				713234912C69B84E00C1AC5D /* CloudKitService.swift */,
+				713BF7332C71AAD3008C0CED /* FirebaseService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -190,10 +261,11 @@
 				713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */,
 				D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */,
 				D6640C202C71E47D008B766C /* ShowAgeInformation.swift */,
-				D6640C222C71E4B4008B766C /* PasswordPage.swift */,
+				D6640C222C71E4B4008B766C /* MenuPage.swift */,
 				432985782C6F9E0400833788 /* Create.swift */,
 				432985852C7042CB00833788 /* Join.swift */,
 				432985892C70495100833788 /* moveToWatch.swift */,
+				713BF7372C71AE77008C0CED /* TestAPIView.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -207,6 +279,34 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		714F3ECE2C719264004A1CA4 /* ExerciseWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */,
+				714F3ED12C719264004A1CA4 /* ContentView.swift */,
+				714F3ED32C719266004A1CA4 /* Assets.xcassets */,
+				714F3ED52C719266004A1CA4 /* Preview Content */,
+			);
+			path = "ExerciseWatch Watch App";
+			sourceTree = "<group>";
+		};
+		714F3ED52C719266004A1CA4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A313BCB9AC84CFF85A135737 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */,
+				0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,17 +314,39 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7132347F2C69B04100C1AC5D /* Build configuration list for PBXNativeTarget "Exercise-for-Elderly" */;
 			buildPhases = (
+				9E672FEA6F45445F04DBDA1B /* [CP] Check Pods Manifest.lock */,
 				7132346D2C69B04000C1AC5D /* Sources */,
 				7132346E2C69B04000C1AC5D /* Frameworks */,
 				7132346F2C69B04000C1AC5D /* Resources */,
+				714F3EDE2C719266004A1CA4 /* Embed Watch Content */,
+				A765BDE5A0FB16EDD2987962 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				714F3ED92C719266004A1CA4 /* PBXTargetDependency */,
+			);
+			name = "Exercise-for-Elderly";
+			productName = "Exercise-for-Elderly";
+			productReference = 713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 714F3EDB2C719266004A1CA4 /* Build configuration list for PBXNativeTarget "ExerciseWatch Watch App" */;
+			buildPhases = (
+				444BA87F15A5CD8A5632D0DD /* [CP] Check Pods Manifest.lock */,
+				714F3EC92C719264004A1CA4 /* Sources */,
+				714F3ECA2C719264004A1CA4 /* Frameworks */,
+				714F3ECB2C719264004A1CA4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Exercise-for-Elderly";
-			productName = "Exercise-for-Elderly";
-			productReference = 713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */;
+			name = "ExerciseWatch Watch App";
+			productName = "ExerciseWatch Watch App";
+			productReference = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -238,6 +360,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					713234702C69B04000C1AC5D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					714F3ECC2C719264004A1CA4 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -256,6 +381,7 @@
 			projectRoot = "";
 			targets = (
 				713234702C69B04000C1AC5D /* Exercise-for-Elderly */,
+				714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -265,38 +391,113 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6640C8E2C735638008B766C /* Info.plist in Resources */,
 				7132347C2C69B04100C1AC5D /* Preview Assets.xcassets in Resources */,
 				713234792C69B04100C1AC5D /* Assets.xcassets in Resources */,
+				713BF7322C71A082008C0CED /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		714F3ECB2C719264004A1CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */,
+				714F3ED42C719266004A1CA4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		444BA87F15A5CD8A5632D0DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExerciseWatch Watch App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E672FEA6F45445F04DBDA1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Exercise-for-Elderly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A765BDE5A0FB16EDD2987962 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7132346D2C69B04000C1AC5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				713234922C69B84E00C1AC5D /* CloudKitService.swift in Sources */,
+				713BF7342C71AAD3008C0CED /* FirebaseService.swift in Sources */,
+				713BF73A2C71B493008C0CED /* ExerciseRoomViewModel.swift in Sources */,
 				4329858A2C70495100833788 /* moveToWatch.swift in Sources */,
-				7132348E2C69B4CD00C1AC5D /* Event.swift in Sources */,
 				D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */,
 				D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */,
 				713234772C69B04000C1AC5D /* ContentView.swift in Sources */,
 				713234902C69B6E000C1AC5D /* UserController.swift in Sources */,
+				D6640C882C732EAD008B766C /* HealthUserData.swift in Sources */,
 				713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */,
 				432985862C7042CB00833788 /* Join.swift in Sources */,
+				713BF7362C71AB3C008C0CED /* ExerciseRoom.swift in Sources */,
 				D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */,
-				713234982C69BEC200C1AC5D /* CreateEventViewModel.swift in Sources */,
-				713234962C69BA3B00C1AC5D /* FactoryViewModel.swift in Sources */,
 				432985842C7042A400833788 /* passwordTextBox.swift in Sources */,
 				4329857C2C6FA21A00833788 /* Button.swift in Sources */,
-				D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */,
+				D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */,
 				432985822C70421700833788 /* SwiftUIView.swift in Sources */,
 				43F945C72C72298500599111 /* VerficationTextField.swift in Sources */,
 				432985792C6F9E0400833788 /* Create.swift in Sources */,
 				432985802C70417D00833788 /* texts.swift in Sources */,
-				7132349A2C69C07B00C1AC5D /* UserProfileViewModel.swift in Sources */,
+				713BF7382C71AE77008C0CED /* TestAPIView.swift in Sources */,
 				43F945C52C72297D00599111 /* VerficationCodeView.swift in Sources */,
 				713234942C69B99F00C1AC5D /* EventController.swift in Sources */,
 				7132348C2C69B2BC00C1AC5D /* User.swift in Sources */,
@@ -304,7 +505,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		714F3EC92C719264004A1CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */,
+				714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		714F3ED92C719266004A1CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 714F3ECC2C719264004A1CA4 /* ExerciseWatch Watch App */;
+			targetProxy = 714F3ED82C719266004A1CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7132347D2C69B04100C1AC5D /* Debug */ = {
@@ -344,7 +562,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -407,7 +625,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -428,16 +646,22 @@
 		};
 		713234802C69B04100C1AC5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18A61F23A3364ED073660D3A /* Pods-Exercise-for-Elderly.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Exercise-for-Elderly/Exercise-for-Elderly.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = B49LQK4KMN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exercise-for-Elderly/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to read your health data in order to works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,7 +673,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -459,16 +683,22 @@
 		};
 		713234812C69B04100C1AC5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Exercise-for-Elderly/Exercise-for-Elderly.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = B49LQK4KMN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Exercise-for-Elderly/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to read your health data in order to works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -480,11 +710,73 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		714F3EDC2C719266004A1CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CF47B5AEBA4142374464341 /* Pods-ExerciseWatch Watch App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = B49LQK4KMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		714F3EDD2C719266004A1CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4292215A524314A5D43D3D30 /* Pods-ExerciseWatch Watch App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = B49LQK4KMN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
 			};
 			name = Release;
 		};
@@ -505,6 +797,15 @@
 			buildConfigurations = (
 				713234802C69B04100C1AC5D /* Debug */,
 				713234812C69B04100C1AC5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		714F3EDB2C719266004A1CA4 /* Build configuration list for PBXNativeTarget "ExerciseWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				714F3EDC2C719266004A1CA4 /* Debug */,
+				714F3EDD2C719266004A1CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
