@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct ExerciseWatch_Watch_AppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    @StateObject private var healthKitManager = HealthKitManager()
+        
+        var body: some Scene {
+            WindowGroup {
+                if healthKitManager.isAuthorized {
+                    bpmView()
+                } else {
+                    Text("Requesting Health Data Access...")
+                        .onAppear {
+                            // Request authorization for HealthKit access when the app launches.
+                            healthKitManager.requestAuthorization()
+                        }
+                }
+            }
         }
-    }
 }
