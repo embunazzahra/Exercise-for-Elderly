@@ -16,9 +16,7 @@ struct Exercise_for_ElderlyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Join()
-//            ContentView(viewModel: viewModelFactory.makeCreateEventViewModel()).environmentObject(viewModelFactory)
-//            TestAPIView()
+            SignInAppleID()
         }
     }
 }

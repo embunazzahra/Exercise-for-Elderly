@@ -15,6 +15,8 @@
 		432985862C7042CB00833788 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985852C7042CB00833788 /* Join.swift */; };
 		432985882C70489B00833788 /* passwordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985872C70489B00833788 /* passwordField.swift */; };
 		4329858A2C70495100833788 /* moveToWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985892C70495100833788 /* moveToWatch.swift */; };
+		43F945C52C72297D00599111 /* VerficationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F945C42C72297D00599111 /* VerficationCodeView.swift */; };
+		43F945C72C72298500599111 /* VerficationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F945C62C72298500599111 /* VerficationTextField.swift */; };
 		713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */; };
 		713234772C69B04000C1AC5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234762C69B04000C1AC5D /* ContentView.swift */; };
 		713234792C69B04100C1AC5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713234782C69B04100C1AC5D /* Assets.xcassets */; };
@@ -22,6 +24,9 @@
 		7132348C2C69B2BC00C1AC5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132348B2C69B2BC00C1AC5D /* User.swift */; };
 		713234902C69B6E000C1AC5D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132348F2C69B6E000C1AC5D /* UserController.swift */; };
 		713234942C69B99F00C1AC5D /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234932C69B99F00C1AC5D /* EventController.swift */; };
+		713234962C69BA3B00C1AC5D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		713234982C69BEC200C1AC5D /* (null) in Sources */ = {isa = PBXBuildFile; };
+		7132349A2C69C07B00C1AC5D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		713BF7322C71A082008C0CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713BF7312C71A082008C0CED /* GoogleService-Info.plist */; };
 		713BF7342C71AAD3008C0CED /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7332C71AAD3008C0CED /* FirebaseService.swift */; };
 		713BF7362C71AB3C008C0CED /* ExerciseRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF7352C71AB3C008C0CED /* ExerciseRoom.swift */; };
@@ -33,6 +38,10 @@
 		714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */; };
 		714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */; };
+		D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */; };
+		D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C202C71E47D008B766C /* ShowAgeInformation.swift */; };
+		D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* PasswordPage.swift */; };
+		D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C242C71E4F0008B766C /* ExtensionColor.swift */; };
 		FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +83,8 @@
 		432985852C7042CB00833788 /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		432985872C70489B00833788 /* passwordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordField.swift; sourceTree = "<group>"; };
 		432985892C70495100833788 /* moveToWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToWatch.swift; sourceTree = "<group>"; };
+		43F945C42C72297D00599111 /* VerficationCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerficationCodeView.swift; sourceTree = "<group>"; };
+		43F945C62C72298500599111 /* VerficationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerficationTextField.swift; sourceTree = "<group>"; };
 		713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise-for-Elderly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise_for_ElderlyApp.swift; sourceTree = "<group>"; };
 		713234762C69B04000C1AC5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +105,10 @@
 		714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Exercise-for-Elderly.entitlements"; sourceTree = "<group>"; };
 		9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-for-Elderly.release.xcconfig"; path = "Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly.release.xcconfig"; sourceTree = "<group>"; };
+		D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleID.swift; sourceTree = "<group>"; };
+		D6640C202C71E47D008B766C /* ShowAgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAgeInformation.swift; sourceTree = "<group>"; };
+		D6640C222C71E4B4008B766C /* PasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPage.swift; sourceTree = "<group>"; };
+		D6640C242C71E4F0008B766C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionColor.swift; path = "Exercise-for-Elderly/View/Page/ExtensionColor.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +148,8 @@
 				4329857B2C6FA21A00833788 /* Button.swift */,
 				4329857F2C70417D00833788 /* texts.swift */,
 				432985812C70421700833788 /* SwiftUIView.swift */,
+				43F945C42C72297D00599111 /* VerficationCodeView.swift */,
+				43F945C62C72298500599111 /* VerficationTextField.swift */,
 				432985832C7042A400833788 /* passwordTextBox.swift */,
 				432985872C70489B00833788 /* passwordField.swift */,
 			);
@@ -229,6 +246,7 @@
 		713234872C69B17E00C1AC5D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D6640C242C71E4F0008B766C /* ExtensionColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -238,6 +256,9 @@
 			children = (
 				713234762C69B04000C1AC5D /* ContentView.swift */,
 				713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */,
+				D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */,
+				D6640C202C71E47D008B766C /* ShowAgeInformation.swift */,
+				D6640C222C71E4B4008B766C /* PasswordPage.swift */,
 				432985782C6F9E0400833788 /* Create.swift */,
 				432985852C7042CB00833788 /* Join.swift */,
 				432985892C70495100833788 /* moveToWatch.swift */,
@@ -456,17 +477,26 @@
 				713BF7342C71AAD3008C0CED /* FirebaseService.swift in Sources */,
 				713BF73A2C71B493008C0CED /* ExerciseRoomViewModel.swift in Sources */,
 				4329858A2C70495100833788 /* moveToWatch.swift in Sources */,
+				D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */,
+				D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */,
 				713234772C69B04000C1AC5D /* ContentView.swift in Sources */,
 				713234902C69B6E000C1AC5D /* UserController.swift in Sources */,
 				713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */,
 				432985862C7042CB00833788 /* Join.swift in Sources */,
 				713BF7362C71AB3C008C0CED /* ExerciseRoom.swift in Sources */,
+				D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */,
+				713234982C69BEC200C1AC5D /* (null) in Sources */,
+				713234962C69BA3B00C1AC5D /* (null) in Sources */,
 				432985842C7042A400833788 /* passwordTextBox.swift in Sources */,
 				4329857C2C6FA21A00833788 /* Button.swift in Sources */,
+				D6640C232C71E4B4008B766C /* PasswordPage.swift in Sources */,
 				432985822C70421700833788 /* SwiftUIView.swift in Sources */,
+				43F945C72C72298500599111 /* VerficationTextField.swift in Sources */,
 				432985792C6F9E0400833788 /* Create.swift in Sources */,
 				432985802C70417D00833788 /* texts.swift in Sources */,
 				713BF7382C71AE77008C0CED /* TestAPIView.swift in Sources */,
+				7132349A2C69C07B00C1AC5D /* (null) in Sources */,
+				43F945C52C72297D00599111 /* VerficationCodeView.swift in Sources */,
 				713234942C69B99F00C1AC5D /* EventController.swift in Sources */,
 				7132348C2C69B2BC00C1AC5D /* User.swift in Sources */,
 				432985882C70489B00833788 /* passwordField.swift in Sources */,
