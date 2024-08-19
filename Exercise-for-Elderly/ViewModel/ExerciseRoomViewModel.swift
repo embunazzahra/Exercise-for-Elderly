@@ -15,6 +15,7 @@ class ExerciseRoomViewModel: ObservableObject {
     @Published var showError: Bool = false
     @Published var errorMessage: String = ""
     @Published var successMessage: String = ""
+    @Published var isLoading: Bool = false
 
     private var firebaseService = FirebaseService()
     private var cancellables = Set<AnyCancellable>()
@@ -42,22 +43,50 @@ class ExerciseRoomViewModel: ObservableObject {
         }
     }
     
-    func joinRoom() {
-        Task {
-            await withCheckedContinuation { continuation in
-                firebaseService.listenForRoomUpdates(inviteCode: inviteCode) { room in
-                    if let room = room {
-                        self.exerciseRoom = room
-                        self.successMessage = "Successfully joined the room!"
-                        self.showError = false
-                    } else {
-                        self.errorMessage = "Room not found or invalid invite code."
-                        self.showError = true
-                    }
-                    continuation.resume()
-                }
+    func joinRoom(completion: @escaping () -> Void) {
+        // Show loading indicator before starting
+        isLoading = true
+
+        firebaseService.listenForRoomUpdates(inviteCode: inviteCode) { [weak self] room in
+            guard let self = self else { return }
+            
+            if let room = room {
+                // Update the view model with the room details
+                self.exerciseRoom = room
+                self.successMessage = "Joined room successfully!"
+                self.showError = false
+            } else {
+                // Handle the error and update the view model
+                self.errorMessage = "Error joining room."
+                self.showError = true
             }
+            
+            // Hide loading indicator after completing
+            self.isLoading = false
+            
+            // Notify the view that joining the room is complete
+            completion()
         }
     }
+
+
+    
+//    func joinRoom() {
+//        Task {
+//            await withCheckedContinuation { continuation in
+//                firebaseService.listenForRoomUpdates(inviteCode: inviteCode) { room in
+//                    if let room = room {
+//                        self.exerciseRoom = room
+//                        self.successMessage = "Successfully joined the room!"
+//                        self.showError = false
+//                    } else {
+//                        self.errorMessage = "Room not found or invalid invite code."
+//                        self.showError = true
+//                    }
+//                    continuation.resume()
+//                }
+//            }
+//        }
+//    }
 }
 

@@ -38,7 +38,7 @@ struct TestAPIView: View {
                 .keyboardType(.numberPad)
             
             Button(action: {
-                     viewModel.joinRoom()
+                viewModel.joinRoom(completion: {})
             }) {
                 Text("Join Room")
                     .font(.title)

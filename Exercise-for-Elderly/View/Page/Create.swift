@@ -9,14 +9,13 @@ import SwiftUI
 
 struct Create: View {
     @EnvironmentObject var viewModel: ExerciseRoomViewModel
-    @State private var isLoading: Bool = true
-    
+
     var body: some View {
         
         
         //        let randomString = generateRandomFourDigitNumberString()
-        NavigationStack{
-            if isLoading {
+        VStack{
+            if viewModel.isLoading {
                 VStack {
                     ProgressView("Generating Invite Code...")
                         .progressViewStyle(CircularProgressViewStyle())
@@ -45,7 +44,7 @@ struct Create: View {
                 .frame(width: 343, alignment: .top)
                 
                 NavigationLink(
-                    destination: moveToWatch()
+                    destination: moveToWatch().environmentObject(viewModel)
                     
                 ) {
                     ButtoniOS(text: "Start", isPressed: true)
@@ -58,10 +57,10 @@ struct Create: View {
     }
     
     private func generateInviteCode() {
-        isLoading = true
+        viewModel.isLoading = true
         viewModel.generateInviteCode {
             // Hide the loading indicator once the invite code is generated
-            isLoading = false
+            viewModel.isLoading = false
         }
     }
 }

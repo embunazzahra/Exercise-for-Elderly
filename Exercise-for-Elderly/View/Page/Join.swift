@@ -19,7 +19,7 @@ struct Join: View {
     }
 
     var body: some View {
-        NavigationStack {
+        
             VStack {
                 PasswordDescription(title: joinTitle, desc: joinDesc)
 
@@ -62,7 +62,7 @@ struct Join: View {
                 // Update concatenatedCodes when codes change
                 concatenatedCodes = concatenatedCodesString
             }
-        }
+        
     }
 }
 
