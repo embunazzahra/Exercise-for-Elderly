@@ -49,10 +49,16 @@ struct moveToWatch: View {
             
         }
         .onAppear {
-            viewModel.isLoading = true
-            viewModel.joinRoom {
-                viewModel.isLoading = false
+            if !viewModel.isJoined {
+                viewModel.isLoading = true
+                viewModel.joinRoom {
+                    viewModel.isLoading = false
+                }
             }
+        }
+        .onDisappear {
+            // Set isJoin to false when the view disappears
+            viewModel.isJoined = false
         }
         
     }

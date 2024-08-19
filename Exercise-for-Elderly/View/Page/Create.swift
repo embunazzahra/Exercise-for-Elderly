@@ -33,7 +33,7 @@ struct Create: View {
                 
                 // Example usage with true condition
                 HStack {
-                    Text("1")
+                    Text("\((viewModel.exerciseRoom?.usersCount ?? 0))")
                         .font(.system(size: 24))
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
@@ -52,15 +52,16 @@ struct Create: View {
             }
         }
         .onAppear {
-            generateInviteCode()
+            generateInviteCodeAndJoin()
         }
     }
     
-    private func generateInviteCode() {
+    private func generateInviteCodeAndJoin() {
         viewModel.isLoading = true
         viewModel.generateInviteCode {
-            // Hide the loading indicator once the invite code is generated
-            viewModel.isLoading = false
+            viewModel.joinRoom {
+                viewModel.isLoading = false
+            }
         }
     }
 }

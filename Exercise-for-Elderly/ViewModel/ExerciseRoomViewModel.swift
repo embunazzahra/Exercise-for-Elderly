@@ -16,6 +16,7 @@ class ExerciseRoomViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var successMessage: String = ""
     @Published var isLoading: Bool = false
+    @Published var isJoined: Bool = false
 
     private var firebaseService = FirebaseService()
     private var cancellables = Set<AnyCancellable>()
@@ -64,6 +65,8 @@ class ExerciseRoomViewModel: ObservableObject {
             
             // Hide loading indicator after completing
             self.isLoading = false
+            
+            self.isJoined = true
             
             // Notify the view that joining the room is complete
             completion()

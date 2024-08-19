@@ -45,16 +45,6 @@ struct Join: View {
                 .padding(.top, 20)
             }
             
-            HStack {
-                Text("1")
-                    .font(.system(size: 24))
-                    .fontWeight(.medium)
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
-                Image(systemName: "person.fill")
-                    .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
-            }
-            .frame(width: 343, alignment: .top)
             
             ButtoniOS(text: "Start", isPressed: isButtonPressed)
                 .disabled(!isButtonPressed)
