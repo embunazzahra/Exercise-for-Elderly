@@ -15,6 +15,11 @@
 		432985862C7042CB00833788 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985852C7042CB00833788 /* Join.swift */; };
 		432985882C70489B00833788 /* passwordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985872C70489B00833788 /* passwordField.swift */; };
 		4329858A2C70495100833788 /* moveToWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985892C70495100833788 /* moveToWatch.swift */; };
+		437DC5302C7332DC0096DA83 /* healthkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DC52F2C7332DC0096DA83 /* healthkitManager.swift */; };
+		437DC5322C73334B0096DA83 /* heartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DC5312C73334B0096DA83 /* heartRateManager.swift */; };
+		437DC5342C7333710096DA83 /* heartRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DC5332C7333710096DA83 /* heartRateModel.swift */; };
+		437DC5362C7333900096DA83 /* heartRateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DC5352C7333900096DA83 /* heartRateVM.swift */; };
+		437DC5392C7339EC0096DA83 /* bpmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DC5382C7339EC0096DA83 /* bpmView.swift */; };
 		43F945C52C72297D00599111 /* VerficationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F945C42C72297D00599111 /* VerficationCodeView.swift */; };
 		43F945C72C72298500599111 /* VerficationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F945C62C72298500599111 /* VerficationTextField.swift */; };
 		713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */; };
@@ -83,6 +88,12 @@
 		432985852C7042CB00833788 /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
 		432985872C70489B00833788 /* passwordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordField.swift; sourceTree = "<group>"; };
 		432985892C70495100833788 /* moveToWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveToWatch.swift; sourceTree = "<group>"; };
+		437DC52F2C7332DC0096DA83 /* healthkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthkitManager.swift; sourceTree = "<group>"; };
+		437DC5312C73334B0096DA83 /* heartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateManager.swift; sourceTree = "<group>"; };
+		437DC5332C7333710096DA83 /* heartRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateModel.swift; sourceTree = "<group>"; };
+		437DC5352C7333900096DA83 /* heartRateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateVM.swift; sourceTree = "<group>"; };
+		437DC5372C7335E70096DA83 /* ExerciseWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ExerciseWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		437DC5382C7339EC0096DA83 /* bpmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bpmView.swift; sourceTree = "<group>"; };
 		43F945C42C72297D00599111 /* VerficationCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerficationCodeView.swift; sourceTree = "<group>"; };
 		43F945C62C72298500599111 /* VerficationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerficationTextField.swift; sourceTree = "<group>"; };
 		713234712C69B04000C1AC5D /* Exercise-for-Elderly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise-for-Elderly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,9 +290,15 @@
 		714F3ECE2C719264004A1CA4 /* ExerciseWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				437DC5372C7335E70096DA83 /* ExerciseWatch Watch App.entitlements */,
 				714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */,
+				437DC5332C7333710096DA83 /* heartRateModel.swift */,
 				714F3ED12C719264004A1CA4 /* ContentView.swift */,
 				714F3ED32C719266004A1CA4 /* Assets.xcassets */,
+				437DC52F2C7332DC0096DA83 /* healthkitManager.swift */,
+				437DC5312C73334B0096DA83 /* heartRateManager.swift */,
+				437DC5352C7333900096DA83 /* heartRateVM.swift */,
+				437DC5382C7339EC0096DA83 /* bpmView.swift */,
 				714F3ED52C719266004A1CA4 /* Preview Content */,
 			);
 			path = "ExerciseWatch Watch App";
@@ -507,8 +524,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437DC5342C7333710096DA83 /* heartRateModel.swift in Sources */,
+				437DC5322C73334B0096DA83 /* heartRateManager.swift in Sources */,
 				714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */,
+				437DC5362C7333900096DA83 /* heartRateVM.swift in Sources */,
+				437DC5302C7332DC0096DA83 /* healthkitManager.swift in Sources */,
 				714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */,
+				437DC5392C7339EC0096DA83 /* bpmView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -667,7 +689,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyyy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -686,7 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -700,7 +722,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyyy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -714,13 +736,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ExerciseWatch Watch App/ExerciseWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to access your health data.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -735,7 +759,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Debug;
 		};
@@ -745,13 +769,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ExerciseWatch Watch App/ExerciseWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 9CXPD89H8W;
+				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to access your health data.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,7 +792,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Release;
 		};
