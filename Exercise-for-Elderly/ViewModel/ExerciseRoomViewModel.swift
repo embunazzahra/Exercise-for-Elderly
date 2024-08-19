@@ -59,6 +59,7 @@ class ExerciseRoomViewModel: ObservableObject {
                 // Handle the error and update the view model
                 self.errorMessage = "Error joining room."
                 self.showError = true
+                print(self.errorMessage)
             }
             
             // Hide loading indicator after completing
