@@ -11,7 +11,7 @@ struct CircularAlert: View {
     var alertType: AlertType
     var person: String
     var heartRate: Int // Replace BPMNumber with heartRate
-    
+        
     var body: some View {
         ZStack{
             CircularTextView(text: "", diameter: 115, color: alertType.color.opacity(0.9))
