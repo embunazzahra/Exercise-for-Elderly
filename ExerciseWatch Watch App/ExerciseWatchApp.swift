@@ -14,7 +14,8 @@ struct ExerciseWatch_Watch_AppApp: App {
         var body: some Scene {
             WindowGroup {
                 if healthKitManager.isAuthorized {
-                    bpmView()
+//                    bpmView()
+                    ContentView()
                 } else {
                     Text("Requesting Health Data Access...")
                         .onAppear {
