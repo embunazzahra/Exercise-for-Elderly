@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var watchConnector = iOSConnector()
+    @StateObject var connector = iOSConnector()
     @State var receivedText = ""
     
     var body: some View {
@@ -17,8 +17,10 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-            Button("send Hi to iphone", action: watchConnector.sendDataToiOS)
-            Text("Received: \(watchConnector.receivedMessage)")
+            Button("send alert") {
+                connector.sendDataToiOS(name: "Embun", bpm: 80)
+            }
+            Text("Received: \(connector.receivedMessage)")
                             .padding()
         }
         .padding()

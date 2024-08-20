@@ -10,13 +10,19 @@ import WatchConnectivity
 
 class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
     var sessions: WCSession
+    var viewModel: ExerciseRoomViewModel?
     @Published var receivedMessage: String = ""
+    
     
     init(sessions: WCSession = .default) {
         self.sessions = sessions
         super.init()
         sessions.delegate = self
         sessions.activate()
+    }
+    
+    func setViewModel(_ viewModel: ExerciseRoomViewModel) {
+        self.viewModel = viewModel
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: (any Error)?) {
@@ -47,21 +53,41 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            if let text = message["text"] as? String {
-                self.receivedMessage = text
-                print("Message received: \(text)")
+            if let type = message["type"] as? String, type == "alert" {
+                let name = message["name"] as? String ?? "Unknown"
+                let bpm = message["bpm"] as? Int ?? 0
+                
+                self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
+                print("Received alert data: \(message)")
+                
+                // Update ExerciseRoomViewModel with the received message
+                self.updateAlertStatusFromMessage(message)
+            } else {
+                print("Unknown message type received: \(message)")
             }
         }
     }
     
-    func sendDataToWatch() {
-        print("send data to watch..")
+    func sendDataToWatch(name: String, bpm: Int) {
         if sessions.isReachable {
-            let message = ["text": "mantab"] // Mengirim pesan "mantab" ke Watch
+            let message: [String: Any] = [
+                "type": "alert",
+                "name": name,
+                "bpm": bpm
+            ]
+            
             sessions.sendMessage(message, replyHandler: nil)
-            print("Sent 'mantab' to watch")
+            print("Sent alert data to iOS: \(message)")
         } else {
             print("Session is not reachable")
         }
+    }
+    
+    @MainActor private func updateAlertStatusFromMessage(_ message: [String: Any]) {
+        guard let type = message["type"] as? String, type == "alert" else { return }
+        guard let bpm = message["bpm"] as? Int else { return }
+        
+        // Call the method to update isAlertOn in the view model
+        viewModel?.updateIsAlertOn(isAlertOn: true)
     }
 }

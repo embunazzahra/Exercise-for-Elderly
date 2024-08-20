@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TestWatchConnectivity: View {
-    @StateObject var watchConnector = WatchConnector()
+    
     
     var body: some View {
         VStack {
@@ -16,12 +16,12 @@ struct TestWatchConnectivity: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-            Text("Received message: \(watchConnector.receivedMessage)")
-                            .padding()
-            Button("Send 'mantab' to watch") {
-                            watchConnector.sendDataToWatch()
-                        }
-                        .padding()
+//            Text("Received message: \(watchConnector.receivedMessage)")
+//                .padding()
+//            Button("Send 'mantab' to watch") {
+//                watchConnector.sendDataToWatch(name: "Embun", bpm: 90)
+//            }
+            .padding()
         }
         .padding()
     }

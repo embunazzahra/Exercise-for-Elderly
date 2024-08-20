@@ -16,8 +16,7 @@ struct Exercise_for_ElderlyApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            SignInAppleID()
-            TestWatchConnectivity()
+            SignInAppleID()
         }
     }
 }

@@ -16,13 +16,26 @@ class ExerciseRoomViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var successMessage: String = ""
     @Published var isLoading: Bool = false
-
+    private let watchConnector = WatchConnector()
+    
     private var firebaseService = FirebaseService()
     private var cancellables = Set<AnyCancellable>()
     
+    // Property to track if the alert data has been sent
+    private var hasSentAlert = false
+    
     init() {
+        watchConnector.setViewModel(self)
+        
         firebaseService.$exerciseRoom
-            .assign(to: &$exerciseRoom)
+            .sink { [weak self] room in
+                self?.exerciseRoom = room
+                self?.handleRoomUpdate(room)
+            }
+            .store(in: &cancellables)
+        //        firebaseService.$exerciseRoom
+        //            .assign(to: &$exerciseRoom)
+        
         print("view model watching the exercise room..")
     }
     
@@ -46,7 +59,7 @@ class ExerciseRoomViewModel: ObservableObject {
     func joinRoom(completion: @escaping () -> Void) {
         // Show loading indicator before starting
         isLoading = true
-
+        
         firebaseService.listenForRoomUpdates(inviteCode: inviteCode) { [weak self] room in
             guard let self = self else { return }
             
@@ -69,25 +82,37 @@ class ExerciseRoomViewModel: ObservableObject {
             completion()
         }
     }
-
-
     
-//    func joinRoom() {
-//        Task {
-//            await withCheckedContinuation { continuation in
-//                firebaseService.listenForRoomUpdates(inviteCode: inviteCode) { room in
-//                    if let room = room {
-//                        self.exerciseRoom = room
-//                        self.successMessage = "Successfully joined the room!"
-//                        self.showError = false
-//                    } else {
-//                        self.errorMessage = "Room not found or invalid invite code."
-//                        self.showError = true
-//                    }
-//                    continuation.resume()
-//                }
-//            }
-//        }
-//    }
+    func updateIsAlertOn(isAlertOn: Bool) {
+        guard !inviteCode.isEmpty else {
+            print("No invite code provided")
+            return
+        }
+        
+        firebaseService.updateIsAlertOn(inviteCode: inviteCode, isAlertOn: isAlertOn) { [weak self] success in
+            guard let self = self else { return }
+            if success {
+                self.successMessage = "Alert state updated successfully!"
+                print(self.successMessage)
+            } else {
+                self.errorMessage = "Failed to update alert state."
+                self.showError = true
+                print(self.errorMessage)
+            }
+        }
+    }
+    
+    // Handle room updates and send data to watch if isAlertOn is true
+    private func handleRoomUpdate(_ room: ExerciseRoom?) {
+        guard let room = room else { return }
+        
+        if room.isAlertOn && !hasSentAlert {
+            watchConnector.sendDataToWatch(name: "Embun", bpm: 80)
+            hasSentAlert = true
+        } else if !room.isAlertOn {
+            // Reset the flag when isAlertOn becomes false
+            hasSentAlert = false
+        }
+    }
 }
 
