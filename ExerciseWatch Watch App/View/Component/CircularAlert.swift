@@ -9,29 +9,26 @@ import SwiftUI
 
 struct CircularAlert: View {
     var alertType: AlertType
-    var person: String
-    var heartRate: Int // Replace BPMNumber with heartRate
-        
+    var heartRate: Int
+    var lastFetchedDate: Date? // Add lastFetchedDate as a parameter
+    
     var body: some View {
         ZStack{
-//            CircularTextView(text: "", diameter: 115, color: alertType.color.opacity(0.9))
-//            CircularTextView(text: "", diameter: 153, color: alertType.color.opacity(0.7))
-//            CircularTextView(text: "", diameter: 185, color: alertType.color.opacity(0.3))
             Image("heartAsset")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 350, height: 187)
                 .clipped()
+            
             VStack {
                 Text("Detak Jantung")
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(.black)
                 
-                // Modified Text view for BPMNumber
                 HStack {
                     Text(heartRate == 0 ? "--" : "\(Int(heartRate))")
                         .font(.system(size: 28, weight: .bold))
-                    .foregroundStyle(.black)
+                        .foregroundStyle(.black)
                     Text("BPM")
                         .fontWeight(.bold)
                         .foregroundStyle(.black)
@@ -40,15 +37,24 @@ struct CircularAlert: View {
                 }
                 
                 HStack(spacing: 0) {
-                    Text("x menit lalu")
+                    Text(timeAgoSince(lastFetchedDate))
                         .font(.system(size: 16, weight: .light))
                         .foregroundStyle(.black)
                 }
             }
+            .padding(.bottom, 20)
         }
+    }
+    
+    // Helper function to calculate the time since the last fetch in seconds
+    func timeAgoSince(_ date: Date?) -> String {
+        guard let date = date else { return "N/A" }
+        let secondsAgo = Int(Date().timeIntervalSince(date)) // Calculate difference in seconds
+        return "\(secondsAgo) detik lalu" // "detik lalu" means "seconds ago"
     }
 }
 
+
 #Preview {
-    CircularAlert(alertType: .ok, person: "Anda", heartRate: 70)
+    CircularAlert(alertType: .ok, heartRate: 70)
 }

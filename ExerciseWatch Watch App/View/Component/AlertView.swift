@@ -10,35 +10,45 @@ import SwiftUI
 struct AlertPopupView: View {
     // Properties for customizing the popup
     let onButtonTapped: () -> Void
+    var Person: String
     
     var body: some View {
-        VStack {
-            
-            Text("Melebihi detak jantung ideal")
+        ZStack {
+            Color.black.opacity(0.9).edgesIgnoringSafeArea(.all)
+            VStack {
+                
+                
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                
+                Text(" \(Person) Melebihi detak jantung ideal.")
 
-                .font(.headline)
+                    .font(.headline)
 
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            Button(action: {
-                onButtonTapped()
-            }) {
-                VStack {
-                    
-                    Text("Tutup")
-                        .foregroundColor(.red)
-                        .padding()
-                        .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                Spacer()
+                
+                Button(action: {
+                    onButtonTapped()
+                }) {
+                    VStack {
+                        
+                        Text("Tutup")
+                            .padding()
+                            .multilineTextAlignment(.center)
+                    }
                 }
+                .padding()
+                
             }
             .padding()
-            
+            .padding(.vertical, 20)
+            .ignoresSafeArea()
+            .cornerRadius(15)
         }
-        .ignoresSafeArea()
-        .background(Color.black.opacity(1))
-        .cornerRadius(15)
-        .padding()
     }
 }
 
