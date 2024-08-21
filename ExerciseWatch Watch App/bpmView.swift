@@ -6,48 +6,57 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct bpmView: View {
     
-    // Initialize the HeartRateViewModel using @StateObject to manage its lifecycle and observe its changes.
     @StateObject private var heartRateViewModel = HeartRateViewModel()
+    @StateObject private var bpmViewModel = BpmViewModel(iosConnector: iOSConnector())
+    let initialHeartRate: Double
+    
+    init(initialHeartRate: Double = 0) {
+        self.initialHeartRate = initialHeartRate
+    }
     
     var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: heartRateViewModel.heartRateModel.heartRate == 0 ? 0 : 7) {
-                // Display heart rate data or "--" if heart rate data is 0.
-                Text(heartRateViewModel.heartRateModel.heartRate == 0 ? "--" : "\(Int(heartRateViewModel.heartRateModel.heartRate))")
-                    .font(.system(size: 33))
-                    .fontWeight(.medium)
-                    .frame(width: heartRateViewModel.heartRateModel.heartRate == 0 ? 25 : 50, height: 22)
-                
-                HStack(spacing: 1) {
-                    // Display the text "BPM".
-                    Text("BPM")
-                        .font(.system(size: 33))
-                        .fontWeight(.medium)
-                        .kerning(0.5)
-                        .foregroundColor(.white)
-                    
-                    // Display the text "BPM".
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 20))
-                        .kerning(0.5)
-                        .foregroundColor(.red)
-                        .frame(width: 24, height: 22)
-                        .opacity(0.98)
+        ZStack {
+            VStack(spacing: 0) {
+                VStack(spacing: heartRateViewModel.heartRateModel.heartRate == 0 ? 0 : 7) {
+                    CircularAlert(alertType: bpmViewModel.bpmState, person: "Anda", heartRate: Int(heartRateViewModel.heartRateModel.heartRate))
+                }
+                .frame(width: 172, height: 22, alignment: .center)
+                .onAppear {
+                    heartRateViewModel.heartRateModel.heartRate = initialHeartRate
+                    heartRateViewModel.startHeartRateQuery()
+                }
+                .onChange(of: heartRateViewModel.heartRateModel.heartRate) { newHeartRate in
+                    bpmViewModel.updateBpmState(newHeartRate: newHeartRate)
                 }
             }
-            .frame(width: 172, height: 22, alignment: .center)
-            // Perform actions when the view appears.
-            .onAppear {
-                // Start the heart rate query when the view appears.
-                heartRateViewModel.startHeartRateQuery()
+            
+            if bpmViewModel.showAlertPopup {
+                AlertPopupView(
+                    message: "BPM terlalu tinggi!",
+                    buttonText: "Tap to Turn Off",
+                    onButtonTapped: {
+                        bpmViewModel.turnOffAlert()
+                    }
+                )
             }
         }
     }
 }
 
 #Preview {
-    bpmView()
+    Group {
+        bpmView(initialHeartRate: 100)
+            .previewDisplayName("State: Alert with Popup")
+    }
 }
+
+
+
+
+
+
+

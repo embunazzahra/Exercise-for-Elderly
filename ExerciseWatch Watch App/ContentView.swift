@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var connector = iOSConnector()
+    @State var receivedText = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("send alert") {
+                connector.sendAlertToiOS(name: "Embun", bpm: 80)
+            }
+            Text("Received: \(connector.receivedMessage)")
+                            .padding()
+            Button("stop alert") {
+                connector.sendStopAlertToiOS()
+            }
         }
         .padding()
     }
