@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct SignInAppleID: View {
+    @ObservedObject var viewModel: HealthUserDataViewModel
+    
     var body: some View {
+        @EnvironmentObject var healthUserDataViewModel: HealthUserDataViewModel
+        
         NavigationView{
             VStack(alignment: .leading, spacing: 20) {
                 // Title
@@ -26,7 +31,8 @@ struct SignInAppleID: View {
                 Spacer()
              
                 // Sign Up with Apple button
-                NavigationLink(destination: ShowAgeInformation()) {
+                NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
+                ) {
                     HStack(spacing: 20) {
                         Image(systemName: "applelogo")
                             .font(.title)
@@ -51,5 +57,6 @@ struct SignInAppleID: View {
 }
 
 #Preview {
-    SignInAppleID()
+    SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
 }
+
