@@ -15,14 +15,14 @@ struct Create: View {
         
         //        let randomString = generateRandomFourDigitNumberString()
         VStack{
-//            if viewModel.isLoading {
-//                VStack {
-//                    ProgressView("Generating Invite Code...")
-//                        .progressViewStyle(CircularProgressViewStyle())
-//                        .font(.title2)
-//                        .padding()
-//                }
-//            } else{
+            if viewModel.isLoading {
+                VStack {
+                    ProgressView("Generating Invite Code...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .font(.title2)
+                        .padding()
+                }
+            } else{
                 Spacer()
                 VStack {
                     PasswordDescription(title: createTitle, desc: createDesc)
@@ -52,7 +52,7 @@ struct Create: View {
                     ButtoniOS(text: "Mulai", isPressed: true)
                 }
             Spacer()
-//            }
+            }
         }
         .onAppear {
             generateInviteCode()

@@ -46,7 +46,7 @@ struct Join: View {
 //            }
             
             
-            ButtoniOS(text: "Start", isPressed: isButtonPressed)
+            ButtoniOS(text: "Gabung", isPressed: isButtonPressed)
                 .disabled(!isButtonPressed)
                 .background(
                     NavigationLink(destination: moveToWatch().environmentObject(viewModel), isActive: $navigateToWatch) {
