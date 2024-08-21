@@ -16,26 +16,29 @@ struct ShowAgeInformation: View {
             ZStack {
                 Image("background")
                     .edgesIgnoringSafeArea(.all)
-                Image("heart")
-                    .padding(.bottom, 150)
+                
                 
                 VStack(alignment: .center, spacing: 20) {
+                    Spacer()
                     // Title
                     Text("Detak Jantung Ideal untuk Olahraga")
                         .font(.system(size: 32))
                         .fontWeight(.bold)
-                        .padding(.top, 100)
-                        .padding(.bottom, 100)
+                        .multilineTextAlignment(.center)
+//                        .padding(.top, 100)
+//                        .padding(.bottom, 100)
                             
-                    Spacer()
+//                    Spacer()
+                    Image("heart")
+    //                    .padding(.bottom, 150)
                     
                     // Heart Rate Range
                     if let idealHeartRateRange = viewModel.idealHeartRateRange {
                         Text(idealHeartRateRange)
                             .font(.system(size: 24))
                             .fontWeight(.semibold)
-                            .foregroundColor(.teal)
-                            .padding(.bottom, 20)
+                            .foregroundColor(.tealcustom)
+//                            .padding(.bottom, 20)
                     }
                     
                     // Heart Rate Description
@@ -52,8 +55,9 @@ struct ShowAgeInformation: View {
                     ) {
                         ButtoniOS(text: "Selanjutnya", isPressed: true)
                             .padding(.top, 20)
-                            .padding(.bottom, 90)
+//                            .padding(.bottom, 90)
                     }
+                    Spacer()
                 }
                 .padding()
             }
