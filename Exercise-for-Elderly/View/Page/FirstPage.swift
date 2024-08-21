@@ -36,7 +36,7 @@ struct FirstPage: View {
                            .frame(width: 233, height: 161) // ukuran gambar
                            .padding(.bottom, 80)
                     
-                    Text("DetakKita requires access to Apple Health data to monitor your heart rate during exercise.")
+                    Text("Pastikan Anda telah mengatur Tanggal Lahir di dalam Health dan mengizinkan DetakKita untuk mengakses Health.")
                         .multilineTextAlignment(.center)
                         .font(.system(size: 20))
                         .padding()
