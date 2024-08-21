@@ -14,25 +14,35 @@ struct CircularAlert: View {
         
     var body: some View {
         ZStack{
-            CircularTextView(text: "", diameter: 115, color: alertType.color.opacity(0.9))
-            CircularTextView(text: "", diameter: 153, color: alertType.color.opacity(0.7))
-            CircularTextView(text: "", diameter: 185, color: alertType.color.opacity(0.3))
+//            CircularTextView(text: "", diameter: 115, color: alertType.color.opacity(0.9))
+//            CircularTextView(text: "", diameter: 153, color: alertType.color.opacity(0.7))
+//            CircularTextView(text: "", diameter: 185, color: alertType.color.opacity(0.3))
+            Image("heartAsset")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 350, height: 187)
+                .clipped()
             VStack {
-                Text("BPM \(person)")
-                    .font(.system(size: 16, weight: .medium))
+                Text("Detak Jantung")
+                    .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(.black)
                 
                 // Modified Text view for BPMNumber
-                Text(heartRate == 0 ? "--" : "\(Int(heartRate))")
-                    .font(.system(size: 24, weight: .bold))
+                HStack {
+                    Text(heartRate == 0 ? "--" : "\(Int(heartRate))")
+                        .font(.system(size: 28, weight: .bold))
                     .foregroundStyle(.black)
-                
-                HStack(spacing: 0) {
-                    Text("\(alertType.text)")
-                        .font(.system(size: 16, weight: .bold))
+                    Text("BPM")
+                        .fontWeight(.bold)
                         .foregroundStyle(.black)
                     Image(systemName: alertType.symbol)
                         .foregroundColor(.black)
+                }
+                
+                HStack(spacing: 0) {
+                    Text("x menit lalu")
+                        .font(.system(size: 16, weight: .light))
+                        .foregroundStyle(.black)
                 }
             }
         }

@@ -36,14 +36,24 @@ struct bpmView: View {
             
             if bpmViewModel.showAlertPopup {
                 AlertPopupView(
-                    message: "BPM terlalu tinggi!",
-                    buttonText: "Tap to Turn Off",
                     onButtonTapped: {
                         bpmViewModel.turnOffAlert()
                     }
                 )
             }
         }
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+        .background(
+            LinearGradient(
+                stops: [
+                    Gradient.Stop(color: .black, location: 0.00),
+                    Gradient.Stop(color: Color(red: 0, green: 0.79, blue: 0.9), location: 1.00),
+                ],
+                startPoint: UnitPoint(x: 0.5, y: 0),
+                endPoint: UnitPoint(x: 0.5, y: 1)
+            )
+            .ignoresSafeArea() // Ensures the gradient fills the entire screen
+        )
     }
 }
 
@@ -53,6 +63,7 @@ struct bpmView: View {
             .previewDisplayName("State: Alert with Popup")
     }
 }
+
 
 
 
