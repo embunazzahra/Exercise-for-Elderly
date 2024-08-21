@@ -21,7 +21,7 @@ struct ShowAgeInformation: View {
                 
                 VStack(alignment: .center, spacing: 20) {
                     // Title
-                    Text("Your Ideal Heart Rate")
+                    Text("Detak Jantung Ideal untuk Olahraga")
                         .font(.system(size: 32))
                         .fontWeight(.bold)
                         .padding(.top, 100)
@@ -40,7 +40,7 @@ struct ShowAgeInformation: View {
                     
                     // Heart Rate Description
                     if let maxHeartRate = viewModel.maxHeartRate {
-                        Text("Your ideal heart rate is between \(viewModel.idealHeartRateRange ?? "") with a maximum heart rate of \(Int(maxHeartRate)) BPM. Stay within these ranges.")
+                        Text("BPM ideal Anda adalah \(viewModel.idealHeartRateRange ?? "") BPM. Pertahankan dalam rentang ini untuk hasil olahraga yang optimal.")
                             .font(.body)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
@@ -50,7 +50,7 @@ struct ShowAgeInformation: View {
                     NavigationLink(
                         destination: MenuPage(healthVM: HealthUserDataViewModel(healthStore: HKHealthStore()))
                     ) {
-                        ButtoniOS(text: "Next", isPressed: true)
+                        ButtoniOS(text: "Selanjutnya", isPressed: true)
                             .padding(.top, 20)
                             .padding(.bottom, 90)
                     }

@@ -51,15 +51,25 @@ struct MenuPage: View {
                         .padding(.bottom, 55)
 
                 
-                Text("Connect with Friends")
-                    .font(.system(size: 32))
-                    .fontWeight(.bold)
+                VStack {
+                    Text("Hubungkan dengan Teman")
+                        .font(.system(size: 32))
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                }
+
+                VStack {
+                    // Description
+                    Text("Pilih cara Anda dalam bergabung ke sesi olahraga bersama teman Anda.")
+                        .font(.body)
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                        .padding(.bottom, 50)
+                }
                 
-                // Description
-                Text("Choose whether you want to create or join")
-                    .font(.body)
-                    .padding(.horizontal)
-                    .padding(.bottom, 50)
+                
                 
                 // Create Button
                 NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
