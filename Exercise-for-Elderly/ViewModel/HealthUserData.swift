@@ -61,7 +61,7 @@ class HealthUserDataViewModel: ObservableObject {
                 if let age = self.calculateAge(from: dateComponents) {
                     self.age = age
                     self.maxHeartRate = self.calculateMaxHeartRate(for: age)
-                    self.idealHeartRateRange = self.calculateIdealHeartRateRange(for: age)
+                    self.idealHeartRateRange = self.calculateDynamicHeartRateRange(for: age)
                 }
             }
         } catch {
@@ -79,30 +79,12 @@ class HealthUserDataViewModel: ObservableObject {
         return 206.9 - (0.67 * Double(age))
     }
     
-    private func calculateIdealHeartRateRange(for age: Int) -> String {
-        switch age {
-        case 20...29:
-            return "100-170 BPM"
-        case 30...34:
-            return "95-162 BPM"
-        case 35...39:
-            return "93-157 BPM"
-        case 40...44:
-            return "90-153 BPM"
-        case 45...49:
-            return "88-149 BPM"
-        case 50...54:
-            return "85-145 BPM"
-        case 55...59:
-            return "83-140 BPM"
-        case 60...64:
-            return "80-136 BPM"
-        case 65...69:
-            return "78-132 BPM"
-        case 70...:
-            return "75-128 BPM"
-        default:
-            return "Unknown"
-        }
+    private func calculateDynamicHeartRateRange(for age: Int) -> String {
+            guard let maxHR = maxHeartRate else { return "Unknown" }
+            let lowerBound = 0.50 * maxHR
+            let upperBound = 0.85 * maxHR
+            return String(format: "%.0f-%.0f BPM", lowerBound, upperBound)
     }
 }
+
+

@@ -80,8 +80,9 @@ struct Exercise_for_ElderlyApp: App {
     
     var body: some Scene {
         WindowGroup {
+            FirstPage()
 //            SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: healthStore))
-            SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
+//            SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
 //                .environmentObject(HealthUserDataViewModel)
         }
     }
