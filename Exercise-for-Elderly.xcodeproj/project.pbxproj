@@ -13,6 +13,7 @@
 		4322D8852C7477A900CF6B67 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322D8832C7477A900CF6B67 /* AlertView.swift */; };
 		4322D8872C7483F000CF6B67 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322D8862C7483F000CF6B67 /* MainView.swift */; };
 		4322D8892C74842C00CF6B67 /* ClickToStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322D8882C74842C00CF6B67 /* ClickToStartView.swift */; };
+		4322D88B2C75730600CF6B67 /* bpmViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4322D88A2C75730600CF6B67 /* bpmViewVM.swift */; };
 		432985792C6F9E0400833788 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432985782C6F9E0400833788 /* Create.swift */; };
 		4329857C2C6FA21A00833788 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329857B2C6FA21A00833788 /* Button.swift */; };
 		432985802C70417D00833788 /* texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4329857F2C70417D00833788 /* texts.swift */; };
@@ -92,6 +93,7 @@
 		4322D8832C7477A900CF6B67 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		4322D8862C7483F000CF6B67 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4322D8882C74842C00CF6B67 /* ClickToStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickToStartView.swift; sourceTree = "<group>"; };
+		4322D88A2C75730600CF6B67 /* bpmViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bpmViewVM.swift; sourceTree = "<group>"; };
 		432985782C6F9E0400833788 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		4329857B2C6FA21A00833788 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		4329857F2C70417D00833788 /* texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = texts.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				437DC5352C7333900096DA83 /* heartRateVM.swift */,
+				4322D88A2C75730600CF6B67 /* bpmViewVM.swift */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -185,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				4322D87D2C74763600CF6B67 /* Component */,
-				437DC5382C7339EC0096DA83 /* bpmView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 				4322D8792C7475CB00CF6B67 /* ModelView */,
 				4322D87B2C7475FC00CF6B67 /* View */,
 				714F3ECF2C719264004A1CA4 /* ExerciseWatchApp.swift */,
+				437DC5382C7339EC0096DA83 /* bpmView.swift */,
 				4322D8862C7483F000CF6B67 /* MainView.swift */,
 				714F3ED12C719264004A1CA4 /* ContentView.swift */,
 				714F3ED32C719266004A1CA4 /* Assets.xcassets */,
@@ -593,6 +596,7 @@
 				4322D8842C7477A900CF6B67 /* AlertType.swift in Sources */,
 				714F3ED02C719264004A1CA4 /* ExerciseWatchApp.swift in Sources */,
 				4322D8802C7476B800CF6B67 /* CircularTextView.swift in Sources */,
+				4322D88B2C75730600CF6B67 /* bpmViewVM.swift in Sources */,
 				437DC5392C7339EC0096DA83 /* bpmView.swift in Sources */,
 				4322D8892C74842C00CF6B67 /* ClickToStartView.swift in Sources */,
 			);
