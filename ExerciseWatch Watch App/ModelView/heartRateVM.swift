@@ -22,6 +22,12 @@ class HeartRateViewModel: ObservableObject {
         }
     }
     
+    // Define a function to stop querying heart rate data.
+    func stopHeartRateQuery() {
+        // Use the shared instance of HeartRateManager to stop the query.
+        HeartRateManager.shared.stopHeartRateQuery()
+    }
+    
     // Define a private function to process the retrieved samples.
     private func process(_ samples: [HKSample]?) {
         // Ensure the samples are of type HKQuantitySample.
@@ -36,3 +42,4 @@ class HeartRateViewModel: ObservableObject {
         }
     }
 }
+

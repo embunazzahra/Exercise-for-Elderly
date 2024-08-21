@@ -34,6 +34,20 @@ struct bpmView: View {
                 }
             }
             
+            HStack{
+                NavigationLink {
+                    MainView()
+                } label: {
+                    Spacer()
+                    Image(systemName: "power.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                }
+                .buttonStyle(PlainButtonStyle())
+            }
+            .padding(.top, 150)
+            .padding(.horizontal, 20)
+            
             if bpmViewModel.showAlertPopup {
                 AlertPopupView(
                     onButtonTapped: {
@@ -54,6 +68,9 @@ struct bpmView: View {
             )
             .ignoresSafeArea() // Ensures the gradient fills the entire screen
         )
+        .onDisappear {
+                    heartRateViewModel.stopHeartRateQuery()
+                }
     }
 }
 
