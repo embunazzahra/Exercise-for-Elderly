@@ -28,7 +28,7 @@ struct Join: View {
                 codes: $codes,
                 isFirstResponders: $isFirstResponders
             )
-            .frame(maxWidth: .infinity, alignment: .topLeading)
+//            .frame(maxWidth: .infinity, alignment: .topLeading)
             
             Spacer()
             
@@ -61,6 +61,7 @@ struct Join: View {
                 }
         }
         .padding(.vertical, 100)
+        .ignoresSafeArea(.keyboard)
         .onChange(of: codes) { newCodes in
             // Update concatenatedCodes when codes change
             concatenatedCodes = concatenatedCodesString

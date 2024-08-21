@@ -15,20 +15,22 @@ struct Create: View {
         
         //        let randomString = generateRandomFourDigitNumberString()
         VStack{
-            if viewModel.isLoading {
-                VStack {
-                    ProgressView("Generating Invite Code...")
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .font(.title2)
-                        .padding()
-                }
-            } else{
+//            if viewModel.isLoading {
+//                VStack {
+//                    ProgressView("Generating Invite Code...")
+//                        .progressViewStyle(CircularProgressViewStyle())
+//                        .font(.title2)
+//                        .padding()
+//                }
+//            } else{
+                Spacer()
                 VStack {
                     PasswordDescription(title: createTitle, desc: createDesc)
                     
                     PasswordTextBox(password: viewModel.exerciseRoom?.inviteCode ?? "0000")
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
+                Spacer()
                 Spacer()
                 
                 // Example usage with true condition
@@ -47,9 +49,10 @@ struct Create: View {
                     destination: moveToWatch().environmentObject(viewModel)
                     
                 ) {
-                    ButtoniOS(text: "Start", isPressed: true)
+                    ButtoniOS(text: "Mulai", isPressed: true)
                 }
-            }
+            Spacer()
+//            }
         }
         .onAppear {
             generateInviteCode()

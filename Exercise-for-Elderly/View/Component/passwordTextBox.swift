@@ -21,7 +21,7 @@ struct PasswordTextBox: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 0, green: 0.51, blue: 0.58))
                 }
-                .padding(.horizontal, 32)
+//                .padding(.horizontal, 32)
                 .padding(.vertical, 24)
                 .frame(width: 80, height: 86, alignment: .center)
                 .background(Color(red: 0.94, green: 0.94, blue: 0.94))
