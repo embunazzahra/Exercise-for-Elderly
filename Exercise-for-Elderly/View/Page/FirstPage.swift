@@ -46,11 +46,11 @@ struct FirstPage: View {
             }
             .onAppear {
             // Delay for 2 seconds before transitioning
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                        withAnimation {
-                            self.isActive = true
-                        }
-                    }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+//                        withAnimation {
+//                            self.isActive = true
+//                        }
+//                    }
             }
 
         }
