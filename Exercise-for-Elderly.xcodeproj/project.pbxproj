@@ -49,11 +49,19 @@
 		714F3ED42C719266004A1CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED32C719266004A1CA4 /* Assets.xcassets */; };
 		714F3ED72C719266004A1CA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */; };
 		714F3EDA2C719266004A1CA4 /* ExerciseWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 714F3ECD2C719264004A1CA4 /* ExerciseWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		71DCEABC2C74199100152A3B /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DCEABB2C74199000152A3B /* WatchConnectivity.framework */; };
+		71DCEABE2C7419AB00152A3B /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DCEABD2C7419AB00152A3B /* WatchConnectivity.framework */; };
+		71DCEAC02C7419E300152A3B /* iOSConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCEABF2C7419E300152A3B /* iOSConnector.swift */; };
+		71DCEAC32C741A9600152A3B /* WatchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCEAC22C741A9600152A3B /* WatchConnector.swift */; };
+		71DCEAC52C741D7E00152A3B /* TestWatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DCEAC42C741D7E00152A3B /* TestWatchConnectivity.swift */; };
 		C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */; };
 		D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */; };
 		D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C202C71E47D008B766C /* ShowAgeInformation.swift */; };
 		D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C222C71E4B4008B766C /* MenuPage.swift */; };
 		D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6640C242C71E4F0008B766C /* ExtensionColor.swift */; };
+		D67D3CA62C7481CC000BE67F /* HealthUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D3CA52C7481CC000BE67F /* HealthUserData.swift */; };
+		D67D3CAA2C74E2CE000BE67F /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D3CA92C74E2CE000BE67F /* FirstPage.swift */; };
+		D67D3CAC2C74E610000BE67F /* InputName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67D3CAB2C74E610000BE67F /* InputName.swift */; };
 		FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,11 +137,19 @@
 		714F3ED32C719266004A1CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714F3ED62C719266004A1CA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Exercise-for-Elderly.entitlements"; sourceTree = "<group>"; };
+		71DCEABB2C74199000152A3B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS10.4.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		71DCEABD2C7419AB00152A3B /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		71DCEABF2C7419E300152A3B /* iOSConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSConnector.swift; sourceTree = "<group>"; };
+		71DCEAC22C741A9600152A3B /* WatchConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnector.swift; sourceTree = "<group>"; };
+		71DCEAC42C741D7E00152A3B /* TestWatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWatchConnectivity.swift; sourceTree = "<group>"; };
 		9B585AE939309398B0CF4F82 /* Pods-Exercise-for-Elderly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-for-Elderly.release.xcconfig"; path = "Target Support Files/Pods-Exercise-for-Elderly/Pods-Exercise-for-Elderly.release.xcconfig"; sourceTree = "<group>"; };
 		D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleID.swift; sourceTree = "<group>"; };
 		D6640C202C71E47D008B766C /* ShowAgeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAgeInformation.swift; sourceTree = "<group>"; };
 		D6640C222C71E4B4008B766C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
 		D6640C242C71E4F0008B766C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionColor.swift; path = "Exercise-for-Elderly/View/Page/ExtensionColor.swift"; sourceTree = SOURCE_ROOT; };
+		D67D3CA52C7481CC000BE67F /* HealthUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthUserData.swift; sourceTree = "<group>"; };
+		D67D3CA92C74E2CE000BE67F /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		D67D3CAB2C74E610000BE67F /* InputName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3EF19AD1633EBD1FCB32BD /* Pods_Exercise_for_Elderly.framework in Frameworks */,
+				71DCEABE2C7419AB00152A3B /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EADADEEDC1F949DF94CA2B /* Pods_ExerciseWatch_Watch_App.framework in Frameworks */,
+				71DCEABC2C74199100152A3B /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +268,7 @@
 		713234732C69B04000C1AC5D /* Exercise-for-Elderly */ = {
 			isa = PBXGroup;
 			children = (
+				71DCEAC12C741A8700152A3B /* WatchConnector */,
 				713BF7312C71A082008C0CED /* GoogleService-Info.plist */,
 				715EE4692C6D645600803178 /* Exercise-for-Elderly.entitlements */,
 				7132348A2C69B28D00C1AC5D /* Controller */,
@@ -295,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				713BF7392C71B493008C0CED /* ExerciseRoomViewModel.swift */,
+				D67D3CA52C7481CC000BE67F /* HealthUserData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -329,11 +349,14 @@
 				713234742C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift */,
 				D6328D832C71E43C00CA6ACC /* SignInAppleID.swift */,
 				D6640C202C71E47D008B766C /* ShowAgeInformation.swift */,
+				D67D3CA92C74E2CE000BE67F /* FirstPage.swift */,
 				D6640C222C71E4B4008B766C /* MenuPage.swift */,
 				432985782C6F9E0400833788 /* Create.swift */,
 				432985852C7042CB00833788 /* Join.swift */,
 				432985892C70495100833788 /* moveToWatch.swift */,
+				D67D3CAB2C74E610000BE67F /* InputName.swift */,
 				713BF7372C71AE77008C0CED /* TestAPIView.swift */,
+				71DCEAC42C741D7E00152A3B /* TestWatchConnectivity.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -361,6 +384,7 @@
 				714F3ED12C719264004A1CA4 /* ContentView.swift */,
 				714F3ED32C719266004A1CA4 /* Assets.xcassets */,
 				714F3ED52C719266004A1CA4 /* Preview Content */,
+				71DCEABF2C7419E300152A3B /* iOSConnector.swift */,
 			);
 			path = "ExerciseWatch Watch App";
 			sourceTree = "<group>";
@@ -373,9 +397,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		71DCEAC12C741A8700152A3B /* WatchConnector */ = {
+			isa = PBXGroup;
+			children = (
+				71DCEAC22C741A9600152A3B /* WatchConnector.swift */,
+			);
+			path = WatchConnector;
+			sourceTree = "<group>";
+		};
 		A313BCB9AC84CFF85A135737 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71DCEABB2C74199000152A3B /* WatchConnectivity.framework */,
+				71DCEABD2C7419AB00152A3B /* WatchConnectivity.framework */,
 				263A1B3E67990B818DAF5A57 /* Pods_Exercise_for_Elderly.framework */,
 				0DBF93FA36EA5089DEA2394A /* Pods_ExerciseWatch_Watch_App.framework */,
 			);
@@ -554,19 +588,24 @@
 			files = (
 				713BF7342C71AAD3008C0CED /* FirebaseService.swift in Sources */,
 				713BF73A2C71B493008C0CED /* ExerciseRoomViewModel.swift in Sources */,
+				D67D3CAC2C74E610000BE67F /* InputName.swift in Sources */,
 				4329858A2C70495100833788 /* moveToWatch.swift in Sources */,
+				D67D3CAA2C74E2CE000BE67F /* FirstPage.swift in Sources */,
 				D6640C252C71E4F0008B766C /* ExtensionColor.swift in Sources */,
 				D6640C212C71E47D008B766C /* ShowAgeInformation.swift in Sources */,
 				713234772C69B04000C1AC5D /* ContentView.swift in Sources */,
 				713234902C69B6E000C1AC5D /* UserController.swift in Sources */,
+				D67D3CA62C7481CC000BE67F /* HealthUserData.swift in Sources */,
 				713234752C69B04000C1AC5D /* Exercise_for_ElderlyApp.swift in Sources */,
 				432985862C7042CB00833788 /* Join.swift in Sources */,
 				713BF7362C71AB3C008C0CED /* ExerciseRoom.swift in Sources */,
+				71DCEAC32C741A9600152A3B /* WatchConnector.swift in Sources */,
 				D6328D842C71E43C00CA6ACC /* SignInAppleID.swift in Sources */,
 				713234982C69BEC200C1AC5D /* (null) in Sources */,
 				713234962C69BA3B00C1AC5D /* (null) in Sources */,
 				432985842C7042A400833788 /* passwordTextBox.swift in Sources */,
 				4329857C2C6FA21A00833788 /* Button.swift in Sources */,
+				71DCEAC52C741D7E00152A3B /* TestWatchConnectivity.swift in Sources */,
 				D6640C232C71E4B4008B766C /* MenuPage.swift in Sources */,
 				432985822C70421700833788 /* SwiftUIView.swift in Sources */,
 				43F945C72C72298500599111 /* VerficationTextField.swift in Sources */,
@@ -589,6 +628,7 @@
 				4322D8872C7483F000CF6B67 /* MainView.swift in Sources */,
 				437DC5322C73334B0096DA83 /* heartRateManager.swift in Sources */,
 				714F3ED22C719264004A1CA4 /* ContentView.swift in Sources */,
+				71DCEAC02C7419E300152A3B /* iOSConnector.swift in Sources */,
 				4322D8852C7477A900CF6B67 /* AlertView.swift in Sources */,
 				437DC5362C7333900096DA83 /* heartRateVM.swift in Sources */,
 				437DC5302C7332DC0096DA83 /* healthkitManager.swift in Sources */,
@@ -743,9 +783,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to read your health data in order to works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -757,7 +800,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyyy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -776,9 +819,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to read your health data in order to works";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs to read your health data in order to works";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -790,7 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyyy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -808,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
@@ -820,7 +866,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitappA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -841,7 +887,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = F7Q8Z8A9XT;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
@@ -853,7 +899,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitappA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

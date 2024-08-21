@@ -14,7 +14,7 @@ class FirebaseService: ObservableObject {
     @Published var exerciseRoom: ExerciseRoom?
     private var db = Firestore.firestore()
     private var listener: ListenerRegistration?
-
+    
     func listenForRoomUpdates(inviteCode: String, completion: @escaping (ExerciseRoom?) -> Void) {
         listener?.remove() // Remove any existing listener
         listener = db.collection("ExerciseRoom")
@@ -89,6 +89,32 @@ class FirebaseService: ObservableObject {
         let initialCode = generateRandomCode()
         checkCode(code: initialCode)
     }
+    
+    func updateIsAlertOn(inviteCode: String, isAlertOn: Bool, completion: @escaping (Bool) -> Void) {
+        let documentRef = db.collection("ExerciseRoom").whereField("inviteCode", isEqualTo: inviteCode).limit(to: 1)
+        
+        documentRef.getDocuments { snapshot, error in
+            guard let document = snapshot?.documents.first else {
+                print("No document found with the invite code")
+                completion(false)
+                return
+            }
+            
+            document.reference.updateData([
+                "isAlertOn": isAlertOn
+            ]) { error in
+                if let error = error {
+                    print("Failed to update boolean state: \(error.localizedDescription)")
+                    completion(false)
+                } else {
+                    print("Boolean state updated successfully")
+                    completion(true)
+                }
+            }
+        }
+    }
+    
+    
     
     deinit {
         listener?.remove() // Remove listener when service is deallocated

@@ -11,7 +11,7 @@ import WatchKit
 struct bpmView: View {
     
     @StateObject private var heartRateViewModel = HeartRateViewModel()
-    @StateObject private var bpmViewModel = BpmViewModel()
+    @StateObject private var bpmViewModel = BpmViewModel(iosConnector: iOSConnector())
     let initialHeartRate: Double
     
     init(initialHeartRate: Double = 0) {
