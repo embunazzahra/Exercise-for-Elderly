@@ -12,12 +12,18 @@ import WatchConnectivity
 class iOSConnector: NSObject, WCSessionDelegate, ObservableObject {
     var sessions: WCSession
     @Published var receivedMessage: String = ""
+    private var bpmViewModel: BpmViewModel?
     
     init(sessions: WCSession = .default) {
         self.sessions = sessions
         super.init()
         sessions.delegate = self
         sessions.activate()
+    }
+    
+    // Function to set the BpmViewModel after initialization
+    func setViewModel(_ viewModel: BpmViewModel) {
+        self.bpmViewModel = viewModel
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: (any Error)?) {
@@ -36,6 +42,7 @@ class iOSConnector: NSObject, WCSessionDelegate, ObservableObject {
                 
                 self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
                 print("Received alert data: \(message)")
+                self.bpmViewModel?.showPopUp(name: name)
             } else {
                 print("Unknown message type received: \(message)")
             }
