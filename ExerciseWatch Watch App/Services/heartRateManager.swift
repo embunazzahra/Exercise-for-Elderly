@@ -12,6 +12,9 @@ class HeartRateManager {
     static let shared = HeartRateManager()
     private let healthStore = HKHealthStore()
     
+    // Reference to the currently running heart rate query.
+    private var heartRateQuery: HKAnchoredObjectQuery?
+
     // Function to start a heart rate query. It takes a completion handler that returns an optional array of HKSample.
     func startHeartRateQuery(completion: @escaping ([HKSample]?) -> Void) {
         
@@ -33,7 +36,19 @@ class HeartRateManager {
             completion(samples)
         }
         
+        // Keep a reference to the query so it can be stopped later.
+        heartRateQuery = query
+        
         // Execute the query on the healthStore.
         healthStore.execute(query)
     }
+    
+    // Function to stop the heart rate query.
+    func stopHeartRateQuery() {
+        if let query = heartRateQuery {
+            healthStore.stop(query)
+            heartRateQuery = nil // Clear the reference after stopping the query
+        }
+    }
 }
+

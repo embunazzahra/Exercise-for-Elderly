@@ -9,29 +9,52 @@ import SwiftUI
 
 struct AlertPopupView: View {
     // Properties for customizing the popup
-    let message: String
-    let buttonText: String
     let onButtonTapped: () -> Void
+    var Person: String
     
     var body: some View {
-        VStack {
-            Text(message)
-                .font(.headline)
-                .padding()
-            
-            Button(action: {
-                onButtonTapped()
-            }) {
-                Text(buttonText)
-                    .foregroundColor(.red)
+        ZStack {
+            Color.black.opacity(0.9).edgesIgnoringSafeArea(.all)
+            VStack {
+                
+                
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                
+                Text(" \(Person) Melebihi detak jantung ideal.")
+
+                    .font(.headline)
+
+                    .multilineTextAlignment(.center)
                     .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
+                
+                Spacer()
+                
+                Button(action: {
+                    onButtonTapped()
+                }) {
+                    VStack {
+                        
+                        Text("Tutup")
+                            .padding()
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                .padding()
+                
             }
+            .padding()
+            .padding(.vertical, 20)
+            .ignoresSafeArea()
+            .cornerRadius(15)
         }
-        .background(Color.black.opacity(0.6))
-        .cornerRadius(15)
-        .padding()
     }
 }
 
+#Preview {
+    Group {
+        bpmView(initialHeartRate: 100)
+            .previewDisplayName("State: Alert with Popup")
+    }
+}
