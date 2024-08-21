@@ -60,3 +60,5 @@ struct SignInAppleID: View {
     SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
 }
 
+
+

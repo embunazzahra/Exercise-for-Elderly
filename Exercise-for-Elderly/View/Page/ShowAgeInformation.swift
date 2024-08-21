@@ -66,3 +66,5 @@ struct ShowAgeInformation: View {
     ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
 }
 
+
+
