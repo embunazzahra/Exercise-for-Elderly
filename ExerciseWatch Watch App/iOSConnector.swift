@@ -42,7 +42,7 @@ class iOSConnector: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    func sendDataToiOS(name: String, bpm: Int) {
+    func sendAlertToiOS(name: String, bpm: Int) {
         if sessions.isReachable {
             let message: [String: Any] = [
                 "type": "alert",
@@ -52,6 +52,20 @@ class iOSConnector: NSObject, WCSessionDelegate, ObservableObject {
             
             sessions.sendMessage(message, replyHandler: nil)
             print("Sent alert data to iOS: \(message)")
+        } else {
+            print("Session is not reachable")
+        }
+    }
+    
+    func sendStopAlertToiOS() {
+        self.receivedMessage = ""
+        if sessions.isReachable {
+            let message: [String: Any] = [
+                "type": "stop_alert"
+            ]
+            
+            sessions.sendMessage(message, replyHandler: nil)
+            print("Sent stop alert signal to iOS: \(message)")
         } else {
             print("Session is not reachable")
         }

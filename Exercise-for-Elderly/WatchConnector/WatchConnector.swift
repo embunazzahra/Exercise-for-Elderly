@@ -53,17 +53,25 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         DispatchQueue.main.async {
-            if let type = message["type"] as? String, type == "alert" {
-                let name = message["name"] as? String ?? "Unknown"
-                let bpm = message["bpm"] as? Int ?? 0
-                
-                self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
-                print("Received alert data: \(message)")
-                
-                // Update ExerciseRoomViewModel with the received message
-                self.updateAlertStatusFromMessage(message)
+            if let type = message["type"] as? String {
+                switch type {
+                case "alert":
+                    let name = message["name"] as? String ?? "Unknown"
+                    let bpm = message["bpm"] as? Int ?? 0
+                    self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
+                    print("Received alert data: \(message)")
+                    self.updateAlertStatusFromMessage(message)
+                    
+                case "stop_alert":
+                    print("Received stop alert signal: \(message)")
+                    self.receivedMessage = "Stop alert received"
+                    self.updateAlertStatusFromMessage(message)
+                    
+                default:
+                    print("Unknown message type received: \(message)")
+                }
             } else {
-                print("Unknown message type received: \(message)")
+                print("Invalid message format received: \(message)")
             }
         }
     }
@@ -84,10 +92,23 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     @MainActor private func updateAlertStatusFromMessage(_ message: [String: Any]) {
-        guard let type = message["type"] as? String, type == "alert" else { return }
-        guard let bpm = message["bpm"] as? Int else { return }
+        guard let type = message["type"] as? String else { return }
         
-        // Call the method to update isAlertOn in the view model
-        viewModel?.updateIsAlertOn(isAlertOn: true)
+        switch type {
+        case "alert":
+            guard let bpm = message["bpm"] as? Int else { return }
+            print("Processing alert message: BPM = \(bpm)")
+            // Call the method to update isAlertOn to true in the view model
+            viewModel?.updateIsAlertOn(isAlertOn: true)
+            
+        case "stop_alert":
+            print("Processing stop alert message")
+            // Call the method to update isAlertOn to false in the view model
+            viewModel?.updateIsAlertOn(isAlertOn: false)
+            
+        default:
+            print("Unknown message type received: \(type)")
+        }
     }
+
 }
