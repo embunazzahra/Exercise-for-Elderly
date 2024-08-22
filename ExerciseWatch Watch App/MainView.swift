@@ -28,7 +28,13 @@ struct MainView: View {
                     if hasStarted {
                         bpmView().environmentObject(bpmViewModel)
                     } else {
-                        ClickToStartView(hasStarted: $hasStarted, hasConnected: hasConnected, code: code)
+                        ClickToStartView(hasStarted: $hasStarted, hasConnected: hasConnected)
+                        Text(code)
+                            .frame(width: 60, height: 20)
+                            .font(.body)
+                            .bold()
+                            .background(.teal).cornerRadius(20)
+                            .padding(.top, 10)
                     }
                 }
             }

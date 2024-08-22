@@ -10,7 +10,6 @@ import SwiftUI
 struct ClickToStartView: View {
     @Binding var hasStarted: Bool
     var hasConnected: Bool
-    var code: String
     
     var body: some View {
         VStack {
@@ -24,12 +23,6 @@ struct ClickToStartView: View {
                             hasStarted = true
                         }
                         .opacity(0.8)
-                    Text(code)
-                        .frame(width: 60, height: 20)
-                        .font(.body)
-                        .bold()
-                        .background(.teal).cornerRadius(20)
-                        .padding(.top, 10)
                 }
             }
         }
