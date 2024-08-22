@@ -27,7 +27,7 @@ struct InputName: View {
                             UserDefaults.standard.set(userName, forKey: "UserName")
                             navigateToShowAgeInfo = true
                         }) {
-                            Text("Save")
+                            Text("Simpan")
                                 .fontWeight(.bold)
                                 .padding()
                         }
@@ -39,16 +39,16 @@ struct InputName: View {
                         .frame(width: 77, height: 53)
                         .padding(.bottom, 32)
                     
-                    Text("Input Name")
+                    Text("Masukkan Nama Anda!")
                         .font(.system(size: 32))
                         .fontWeight(.bold)
                         .padding(.bottom, 10)
                     
-                    Text("Enter your name here.")
+                    Text("Masukkan nama yang digunakan sehari-hari")
                         .multilineTextAlignment(.center)
-                        .font(.system(size: 20))
+                        .font(.body)
                     
-                    TextField("Name", text: $userName)
+                    TextField("Nama", text: $userName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .multilineTextAlignment(.center)
