@@ -72,8 +72,8 @@ struct Join: View {
     }
 }
 
-#Preview {
-    Join().environmentObject(ExerciseRoomViewModel())
-}
+//#Preview {
+//    Join().environmentObject(ExerciseRoomViewModel())
+//}
 
 

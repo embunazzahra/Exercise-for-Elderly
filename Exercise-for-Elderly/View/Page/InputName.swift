@@ -1,35 +1,38 @@
-//
-//  InputName.swift
-//  Exercise-for-Elderly
-//
-//  Created by Jasmine Mutia Alifa on 20/08/24.
-//
 
 import SwiftUI
 import HealthKit
+import SwiftData
 
 struct InputName: View {
+    @Environment(\.modelContext) private var context: ModelContext
+    @Query private var userData: [UserDataModel]
+    
     @State private var userName: String = ""
-    @State private var navigateToShowAgeInfo = false // State for navigation
+    @State private var navigateToShowAgeInfo = false
+    @State private var showAlert = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                // Background for the whole screen
                 Image("background")
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack(alignment:.center, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
                     HStack {
                         Spacer()
                         Button(action: {
-                            // Save the username and navigate to ShowAgeInformation
-                            UserDefaults.standard.set(userName, forKey: "UserName")
-                            navigateToShowAgeInfo = true
+                            showAlert = true
                         }) {
                             Text("Simpan")
                                 .fontWeight(.bold)
                                 .padding()
+                        }
+                        .alert("Apakah Anda yakin ingin menyimpannya?", isPresented: $showAlert) {
+                            Button("Batal", role: .cancel) {}
+                            Button("Simpan") {
+                                saveUserName()
+                                navigateToShowAgeInfo = true
+                            }
                         }
                     }
                     
@@ -54,8 +57,7 @@ struct InputName: View {
                         .multilineTextAlignment(.center)
                         .font(.system(size: 20))
                         .padding(.bottom, 450)
-                    
-                    // NavigationLink to ShowAgeInformation
+                 
                     NavigationLink(
                         destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore())),
                         isActive: $navigateToShowAgeInfo
@@ -63,11 +65,25 @@ struct InputName: View {
                         EmptyView()
                     }
                 }
+                .onAppear {
+                    // Check if the user's name is already saved
+                    if !userData.isEmpty, let savedName = userData.first?.name {
+                        userName = savedName
+                        navigateToShowAgeInfo = true
+                    }
+                }
             }
         }
     }
-}
-
-#Preview {
-    InputName()
+    
+    private func saveUserName() {
+        if let existingUserData = userData.first {
+            existingUserData.name = userName
+        } else {
+            let newUserData = UserDataModel(name: userName)
+            context.insert(newUserData)
+        }
+        
+        try? context.save()
+    }
 }
