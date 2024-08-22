@@ -32,7 +32,7 @@ struct MenuPage: View {
                                     
                                     // Max BPM
                         if let idealBPM = healthVM.idealHeartRateRange {
-                            Text("Ideal Heart Range: \((idealBPM))")
+                            Text("\((idealBPM))")
                                 .font(.system(size: 16))
                                 .foregroundColor(.gray)
                                 .padding(.leading, 5)
@@ -48,29 +48,48 @@ struct MenuPage: View {
                             Spacer()
                         }
                         .padding(.horizontal)
-                        .padding(.bottom, 55)
+//                        .padding(.bottom, 55)
+                Spacer()
+                
+                
+                    Text("Hubungkan dengan\nTeman")
+                        .font(.system(size: 32))
+                        .fontWeight(.bold)
+                        
+                        .frame(maxWidth: .infinity)
+                
+                        .multilineTextAlignment(.center)
+                        .padding(.top,5)
+                
 
                 
-                Text("Connect with Friends")
-                    .font(.system(size: 32))
-                    .fontWeight(.bold)
+                    // Description
+                    Text("Pilih cara Anda dalam bergabung\nke sesi olahraga bersama teman Anda.")
+                        .font(.body)
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+//                        .padding(.bottom, 20)
                 
-                // Description
-                Text("Choose whether you want to create or join")
-                    .font(.body)
-                    .padding(.horizontal)
-                    .padding(.bottom, 50)
+                
+                Spacer()
                 
                 // Create Button
                 NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
                 ){
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Create")
+                        Text("Buat Sesi")
                             .font(.system(size: 24))
                             .fontWeight(.semibold)
+                            .padding(.bottom)
                         
-                        Text("Invite your friend by showing the code to your friend")
-                            .font(.body)
+
+                            Text("Buat sesi dan undang temanmu dengan menunjukkan kode kepada mereka.")
+                                .font(.body)
+                                .multilineTextAlignment(.leading)
+
+                        
+                        
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
@@ -91,12 +110,14 @@ struct MenuPage: View {
                 NavigationLink(destination: ShowAgeInformation(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
                 ){
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Join")
+                        Text("Gabung Sesi")
                             .font(.system(size: 24))
                             .fontWeight(.semibold)
+                            .padding(.bottom)
                         
-                        Text("Input the given code to join your friend’s run and run together")
+                        Text("Masukkan kode yang diberikan oleh temanmu untuk bergabung ke olahraga.")
                             .font(.body)
+                            .multilineTextAlignment(.leading)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
@@ -111,26 +132,29 @@ struct MenuPage: View {
                         selectedOption = "Join"
                     }
                 }
-                .padding(.bottom, 50)
+//                .padding(.bottom, 50)
+                Spacer()
                 
                 // Conditional NavigationLink
                 if let option = selectedOption {
                     NavigationLink(
                         destination: destinationView(for: option).environmentObject(viewModel)
                     ) {
-                        ButtoniOS(text: "Start", isPressed: true)
+                        ButtoniOS(text: "Selanjutnya", isPressed: true)
                     }
-                    .padding(.top, 20)
-                    .padding(.bottom, 10)
+//                    .padding(.top, 20)
+//                    .padding(.bottom, 10)
                 } else {
-                    ButtoniOS(text: "Start", isPressed: false)
-                        .padding(.top, 20)
-                        .padding(.bottom, 10)
+                    ButtoniOS(text: "Selanjutnya", isPressed: false)
+//                        .padding(.top, 20)
+//                        .padding(.bottom, 10)
                         .disabled(true)
                 }
+                Spacer()
                 
             }
             .padding()
+            .navigationBarBackButtonHidden(true)
         
     }
     

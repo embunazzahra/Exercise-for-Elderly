@@ -1,42 +1,4 @@
-//
-//  Exercise_for_ElderlyApp.swift
-//  Exercise-for-Elderly
-//
-//  Created by Dhau Embun Azzahra on 12/08/24.
-//
 
-//import SwiftUI
-//import Firebase
-//
-//@main
-//struct Exercise_for_ElderlyApp: App {
-//    
-//    // Register AppDelegate for Firebase setup
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//    
-//    var body: some Scene {
-//        WindowGroup {
-//            SignInAppleID()
-//        }
-//    }
-//}
-//
-//class AppDelegate: NSObject, UIApplicationDelegate {
-//    func application(_ application: UIApplication,
-//                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        // Configure Firebase
-//        FirebaseApp.configure()
-//        
-//        // Optional: Set up other services or configurations
-//        return true
-//    }
-//    
-//    // Optional: Handle other app delegate methods if needed
-//    func application(_ application: UIApplication,
-//                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//        // Handle registration for remote notifications, e.g., for push notifications
-//    }
-//}
 import SwiftUI
 import Firebase
 import HealthKit
@@ -46,6 +8,7 @@ struct Exercise_for_ElderlyApp: App {
     
     // Register AppDelegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @State private var isHealthAuthorized = false
     
     private let healthStore: HKHealthStore
     @StateObject private var healthUserDataViewModel = HealthUserDataViewModel(healthStore: HKHealthStore())
@@ -53,7 +16,6 @@ struct Exercise_for_ElderlyApp: App {
         init() {
             guard HKHealthStore.isHealthDataAvailable() else { fatalError("This app requires a device that supports HealthKit") }
             healthStore = HKHealthStore()
-            requestAuthorization()
         }
         
         func requestAuthorization() {
@@ -67,7 +29,8 @@ struct Exercise_for_ElderlyApp: App {
 
             healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
                 if success {
-                    // User has granted permission, you can now read/write HealthKit data
+                    // User has granted permission, try to fetch date of birth
+                    self.fetchDateOfBirth()
                 } else {
                     // Authorization failed or user denied access
                     if let error = error {
@@ -76,15 +39,34 @@ struct Exercise_for_ElderlyApp: App {
                 }
             }
         }
+    
+    func fetchDateOfBirth() {
+        do {
+            let birthDate = try healthStore.dateOfBirthComponents()
+            print("Fetched Date of Birth: \(birthDate)")
+            self.isHealthAuthorized = true // Proceed to InputName if everything is fine
+        } catch {
+            print("Failed to fetch date of birth: \(error.localizedDescription)")
+            self.isHealthAuthorized = false // Stay on FirstPage if fetching date of birth fails
+        }
+    }
 
     
     var body: some Scene {
         WindowGroup {
-            FirstPage()
-//            SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: healthStore))
-//            SignInAppleID(viewModel: HealthUserDataViewModel(healthStore: HKHealthStore()))
-//                .environmentObject(HealthUserDataViewModel)
+            Group {
+                if isHealthAuthorized {
+                    InputName()
+                } else {
+                    FirstPage()
+                }
+            }
+            .onAppear {
+                requestAuthorization()
+                print("Requesting authorization...")
+            }
         }
+        
     }
 }
 

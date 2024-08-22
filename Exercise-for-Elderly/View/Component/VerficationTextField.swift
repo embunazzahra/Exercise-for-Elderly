@@ -67,6 +67,17 @@ struct VerficationTextField: UIViewRepresentable {
         textField.delegate = context.coordinator
         textField.textAlignment = .center
         textField.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        
+        // Tambahkan toolbar dengan tombol "Done"
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: textField, action: #selector(textField.resignFirstResponder))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.setItems([flexSpace, doneButton], animated: false)
+        
+        textField.inputAccessoryView = toolbar
+        
         return textField
     }
 
