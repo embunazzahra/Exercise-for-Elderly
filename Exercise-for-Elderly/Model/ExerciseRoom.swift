@@ -12,5 +12,6 @@ struct ExerciseRoom: Identifiable, Codable {
     @DocumentID var id: String? // Firestore document ID
     var createdAt: Timestamp
     var inviteCode: String
-    var isAlertOn: Bool // Example field to represent the lamp state
+    var username: String // field to represent user that send the alert
+    var isAlertOn: Bool // Example field to represent the alert state
 }

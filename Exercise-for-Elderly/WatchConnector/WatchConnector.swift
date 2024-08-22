@@ -76,7 +76,7 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    func sendDataToWatch(name: String, bpm: Int) {
+    func sendAlertToWatch(name: String, bpm: Int) {
         if sessions.isReachable {
             let message: [String: Any] = [
                 "type": "alert",
@@ -86,6 +86,21 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
             
             sessions.sendMessage(message, replyHandler: nil)
             print("Sent alert data to iOS: \(message)")
+        } else {
+            print("Session is not reachable")
+        }
+    }
+    
+    func sendUserDataToWatch(name: String, inviteCode: String) {
+        if sessions.isReachable {
+            let message: [String: Any] = [
+                "type": "user_data",
+                "name": name,
+                "inviteCode": inviteCode
+            ]
+            
+            sessions.sendMessage(message, replyHandler: nil)
+            print("Sent user data to iOS: \(message)")
         } else {
             print("Session is not reachable")
         }

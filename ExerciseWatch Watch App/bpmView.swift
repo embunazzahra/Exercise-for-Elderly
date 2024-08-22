@@ -57,7 +57,7 @@ struct bpmView: View {
                     AlertPopupView(
                         onButtonTapped: {
                             bpmViewModel.turnOffAlert()
-                        }, Person: "Andin"
+                        }, Person: bpmViewModel.alertUsername
                     )
                     .ignoresSafeArea()
                 }

@@ -35,16 +35,40 @@ class iOSConnector: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+//        DispatchQueue.main.async {
+//            if let type = message["type"] as? String, type == "alert" {
+//                let name = message["name"] as? String ?? "Unknown"
+//                let bpm = message["bpm"] as? Int ?? 0
+//                
+//                self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
+//                print("Received alert data: \(message)")
+//                self.bpmViewModel?.showPopUp(name: name)
+//            } else {
+//                print("Unknown message type received: \(message)")
+//            }
+//        }
         DispatchQueue.main.async {
-            if let type = message["type"] as? String, type == "alert" {
-                let name = message["name"] as? String ?? "Unknown"
-                let bpm = message["bpm"] as? Int ?? 0
-                
-                self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
-                print("Received alert data: \(message)")
-                self.bpmViewModel?.showPopUp(name: name)
+            if let type = message["type"] as? String {
+                switch type {
+                case "alert":
+                    let name = message["name"] as? String ?? "Unknown"
+                    let bpm = message["bpm"] as? Int ?? 0
+                    
+                    self.receivedMessage = "Alert from \(name): BPM = \(bpm)"
+                    print("Received alert data: \(message)")
+                    self.bpmViewModel?.showPopUp(name: name)
+                    
+                case "user_data":
+                    if let inviteCode = message["inviteCode"] as? String {
+                        self.bpmViewModel?.inviteCode = inviteCode
+                        print("Updated inviteCode in ViewModel: \(inviteCode)")
+                    }
+                    
+                default:
+                    print("Unknown message type received: \(message)")
+                }
             } else {
-                print("Unknown message type received: \(message)")
+                print("Invalid message format received: \(message)")
             }
         }
     }
