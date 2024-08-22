@@ -787,7 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = B49LQK4KMN;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
@@ -804,7 +804,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -823,7 +823,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Exercise-for-Elderly/Preview Content\"";
-				DEVELOPMENT_TEAM = B49LQK4KMN;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "This app needs to read your health data in order to works";
@@ -840,7 +840,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -858,19 +858,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B49LQK4KMN;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to access your health data.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderlyy";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy.watchkitappA";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitappA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -891,19 +891,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExerciseWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B49LQK4KMN;
+				DEVELOPMENT_TEAM = 9CXPD89H8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ExerciseWatch;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs to access your health data.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderlyy";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.minitiga.Exercise-for-Elderly";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderlyy.watchkitappA";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minitiga.Exercise-for-Elderly.watchkitappA";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

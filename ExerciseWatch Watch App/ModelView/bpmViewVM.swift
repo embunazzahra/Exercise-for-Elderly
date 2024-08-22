@@ -34,7 +34,7 @@ class BpmViewModel: ObservableObject {
     }
     
     func updateBpmState(newHeartRate: Double) {
-        if newHeartRate >= 80 {
+        if newHeartRate >= 60 {
             if !isPressed {
                 showPopUp(name: "Anda")
                 iosConnector.sendAlertToiOS(name: "Name", bpm: Int(newHeartRate))

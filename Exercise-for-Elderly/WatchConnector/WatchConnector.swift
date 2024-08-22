@@ -115,11 +115,13 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
             print("Processing alert message: BPM = \(bpm)")
             // Call the method to update isAlertOn to true in the view model
             viewModel?.updateIsAlertOn(isAlertOn: true)
+            print("trying to call viewModel?.updateIsAlertOn....")
             
         case "stop_alert":
             print("Processing stop alert message")
             // Call the method to update isAlertOn to false in the view model
             viewModel?.updateIsAlertOn(isAlertOn: false)
+            print("trying to stop viewModel?.updateIsAlertOn....")
             
         default:
             print("Unknown message type received: \(type)")

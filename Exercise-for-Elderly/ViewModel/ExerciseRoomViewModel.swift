@@ -25,6 +25,9 @@ class ExerciseRoomViewModel: ObservableObject {
     // Property to track if the alert data has been sent
     private var hasSentAlert = false
     
+    @Published var userData: [UserDataModel] = []
+    
+    
     init() {
         watchConnector.setViewModel(self)
         
@@ -34,9 +37,6 @@ class ExerciseRoomViewModel: ObservableObject {
                 self?.handleRoomUpdate(room)
             }
             .store(in: &cancellables)
-        //        firebaseService.$exerciseRoom
-        //            .assign(to: &$exerciseRoom)
-        
         print("view model watching the exercise room..")
     }
     

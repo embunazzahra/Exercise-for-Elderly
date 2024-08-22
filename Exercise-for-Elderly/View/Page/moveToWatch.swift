@@ -62,7 +62,7 @@ struct moveToWatch: View {
     }
 }
 
-#Preview {
-    moveToWatch()
-        .environmentObject(ExerciseRoomViewModel())
-}
+//#Preview {
+//    moveToWatch()
+//        .environmentObject(ExerciseRoomViewModel())
+//}

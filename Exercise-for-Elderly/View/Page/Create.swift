@@ -74,6 +74,6 @@ func generateRandomFourDigitNumberString() -> String {
     return String(randomNumber)
 }
 
-#Preview {
-    Create().environmentObject(ExerciseRoomViewModel())
-}
+//#Preview {
+//    Create().environmentObject(ExerciseRoomViewModel())
+//}
