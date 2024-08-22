@@ -16,6 +16,7 @@ class ExerciseRoomViewModel: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var successMessage: String = ""
     @Published var isLoading: Bool = false
+    @Published var username: String = "BABA"
     private let watchConnector = WatchConnector()
     
     private var firebaseService = FirebaseService()
@@ -68,6 +69,9 @@ class ExerciseRoomViewModel: ObservableObject {
                 self.exerciseRoom = room
                 self.successMessage = "Joined room successfully!"
                 self.showError = false
+                
+                // Send user data to the watch after successfully joining the room
+                self.watchConnector.sendUserDataToWatch(name: self.username, inviteCode: room.inviteCode)
             } else {
                 // Handle the error and update the view model
                 self.errorMessage = "Error joining room."
@@ -89,7 +93,7 @@ class ExerciseRoomViewModel: ObservableObject {
             return
         }
         
-        firebaseService.updateIsAlertOn(inviteCode: inviteCode, isAlertOn: isAlertOn) { [weak self] success in
+        firebaseService.updateIsAlertOn(inviteCode: inviteCode, isAlertOn: isAlertOn, username: self.username) { [weak self] success in
             guard let self = self else { return }
             if success {
                 self.successMessage = "Alert state updated successfully!"
@@ -107,7 +111,7 @@ class ExerciseRoomViewModel: ObservableObject {
         guard let room = room else { return }
         
         if room.isAlertOn && !hasSentAlert {
-            watchConnector.sendDataToWatch(name: "Embun", bpm: 80)
+            watchConnector.sendAlertToWatch(name: room.username, bpm: 80)
             hasSentAlert = true
         } else if !room.isAlertOn {
             // Reset the flag when isAlertOn becomes false
