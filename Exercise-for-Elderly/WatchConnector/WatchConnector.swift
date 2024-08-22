@@ -100,7 +100,7 @@ class WatchConnector: NSObject, WCSessionDelegate, ObservableObject {
             ]
             
             sessions.sendMessage(message, replyHandler: nil)
-            print("Sent user data to iOS: \(message)")
+            print("Sent user data to watch: \(message)")
         } else {
             print("Session is not reachable")
         }

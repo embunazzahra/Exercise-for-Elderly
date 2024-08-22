@@ -24,14 +24,13 @@ struct ClickToStartView: View {
                             hasStarted = true
                         }
                         .opacity(0.8)
+                    Text(code)
+                        .frame(width: 60, height: 20)
+                        .font(.body)
+                        .bold()
+                        .background(.teal).cornerRadius(20)
+                        .padding(.top, 10)
                 }
-                
-                Text(code)
-                    .frame(width: 60, height: 20)
-                    .font(.body)
-                    .bold()
-                    .background(.teal).cornerRadius(20)
-                    .padding(.top, 10)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
