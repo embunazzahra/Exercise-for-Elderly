@@ -10,18 +10,25 @@ import SwiftUI
 struct MainView: View {
     @State private var hasStarted: Bool = false
     
-    // nanti ganti ya mbun
-    var hasconnected = true
-    var code = "1234"
+    @StateObject private var bpmViewModel = BpmViewModel(iosConnector: iOSConnector())
+    
+    // Computed property that checks if inviteCode is non-empty
+    private var hasConnected: Bool {
+        !bpmViewModel.inviteCode.isEmpty
+    }
+    
+    var code: String {
+        bpmViewModel.inviteCode
+    }
         
     var body: some View {
         NavigationStack{
             VStack {
                 Group {
                     if hasStarted {
-                       bpmView()
+                        bpmView().environmentObject(bpmViewModel)
                     } else {
-                        ClickToStartView(hasStarted: $hasStarted, hasConnected: true, code: code)
+                        ClickToStartView(hasStarted: $hasStarted, hasConnected: hasConnected, code: code)
                     }
                 }
             }

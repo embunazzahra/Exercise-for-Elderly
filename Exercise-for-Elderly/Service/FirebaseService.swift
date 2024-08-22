@@ -49,7 +49,7 @@ class FirebaseService: ObservableObject {
                 
                 let newRoom = ExerciseRoom(
                     createdAt: Timestamp(date: Date()), inviteCode: inviteCode,
-                    isAlertOn: false
+                    username: "User", isAlertOn: false
                 )
                 
                 do {
@@ -90,7 +90,7 @@ class FirebaseService: ObservableObject {
         checkCode(code: initialCode)
     }
     
-    func updateIsAlertOn(inviteCode: String, isAlertOn: Bool, completion: @escaping (Bool) -> Void) {
+    func updateIsAlertOn(inviteCode: String, isAlertOn: Bool, username: String, completion: @escaping (Bool) -> Void) {
         let documentRef = db.collection("ExerciseRoom").whereField("inviteCode", isEqualTo: inviteCode).limit(to: 1)
         
         documentRef.getDocuments { snapshot, error in
@@ -100,14 +100,19 @@ class FirebaseService: ObservableObject {
                 return
             }
             
-            document.reference.updateData([
-                "isAlertOn": isAlertOn
-            ]) { error in
+            var updateData: [String: Any] = ["isAlertOn": isAlertOn]
+            
+            // Update username only if isAlertOn is true
+            if isAlertOn {
+                updateData["username"] = username
+            }
+            
+            document.reference.updateData(updateData) { error in
                 if let error = error {
-                    print("Failed to update boolean state: \(error.localizedDescription)")
+                    print("Failed to update data: \(error.localizedDescription)")
                     completion(false)
                 } else {
-                    print("Boolean state updated successfully")
+                    print("Data updated successfully")
                     completion(true)
                 }
             }

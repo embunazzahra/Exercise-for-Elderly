@@ -18,6 +18,10 @@ class BpmViewModel: ObservableObject {
     
     @Published var isPressed: Bool = false
     
+    @Published var alertUsername: String = ""
+    
+    @Published var inviteCode: String = ""
+    
     // Timer to trigger haptic feedback
     private var hapticTimer: Timer? = nil
     
@@ -30,7 +34,7 @@ class BpmViewModel: ObservableObject {
     }
     
     func updateBpmState(newHeartRate: Double) {
-        if newHeartRate >= 100 {
+        if newHeartRate >= 80 {
             if !isPressed {
                 showPopUp(name: "Anda")
                 iosConnector.sendAlertToiOS(name: "Name", bpm: Int(newHeartRate))
@@ -43,6 +47,7 @@ class BpmViewModel: ObservableObject {
     }
     
     func showPopUp (name: String) {
+        self.alertUsername = name
         showAlertPopup = true
         startHapticFeedback()
     }

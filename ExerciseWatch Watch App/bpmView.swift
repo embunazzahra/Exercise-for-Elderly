@@ -11,7 +11,7 @@ import WatchKit
 struct bpmView: View {
     
     @StateObject private var heartRateViewModel = HeartRateViewModel()
-    @StateObject private var bpmViewModel = BpmViewModel(iosConnector: iOSConnector())
+    @EnvironmentObject var bpmViewModel: BpmViewModel
     let initialHeartRate: Double
     
     init(initialHeartRate: Double = 0) {
@@ -57,7 +57,7 @@ struct bpmView: View {
                     AlertPopupView(
                         onButtonTapped: {
                             bpmViewModel.turnOffAlert()
-                        }, Person: "Andin"
+                        }, Person: bpmViewModel.alertUsername
                     )
                     .ignoresSafeArea()
                 }
