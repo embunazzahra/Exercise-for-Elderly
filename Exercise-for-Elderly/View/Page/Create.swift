@@ -23,12 +23,14 @@ struct Create: View {
                         .padding()
                 }
             } else{
+                Spacer()
                 VStack {
                     PasswordDescription(title: createTitle, desc: createDesc)
                     
                     PasswordTextBox(password: viewModel.exerciseRoom?.inviteCode ?? "0000")
                 }
                 .frame(maxWidth: .infinity, alignment: .topLeading)
+                Spacer()
                 Spacer()
                 
                 // Example usage with true condition
@@ -47,8 +49,9 @@ struct Create: View {
                     destination: moveToWatch().environmentObject(viewModel)
                     
                 ) {
-                    ButtoniOS(text: "Start", isPressed: true)
+                    ButtoniOS(text: "Mulai", isPressed: true)
                 }
+            Spacer()
             }
         }
         .onAppear {

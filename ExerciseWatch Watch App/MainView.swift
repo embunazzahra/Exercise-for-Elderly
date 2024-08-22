@@ -10,14 +10,41 @@ import SwiftUI
 struct MainView: View {
     @State private var hasStarted: Bool = false
     
+    @StateObject private var bpmViewModel = BpmViewModel(iosConnector: iOSConnector())
+    
+    // Computed property that checks if inviteCode is non-empty
+    private var hasConnected: Bool {
+        !bpmViewModel.inviteCode.isEmpty
+    }
+    
+    var code: String {
+        bpmViewModel.inviteCode
+    }
+        
     var body: some View {
-        Group {
-            if hasStarted {
-               bpmView()
-            } else {
-                ClickToStartView(hasStarted: $hasStarted)
+        NavigationStack{
+            VStack {
+                Group {
+                    if hasStarted {
+                        bpmView().environmentObject(bpmViewModel)
+                    } else {
+                        ClickToStartView(hasStarted: $hasStarted, hasConnected: hasConnected, code: code)
+                    }
+                }
             }
         }
+        .background(
+            LinearGradient(
+                stops: [
+                    Gradient.Stop(color: .black, location: 0.00),
+                    Gradient.Stop(color: Color(red: 0, green: 0.79, blue: 0.9), location: 1.00),
+                ],
+                startPoint: UnitPoint(x: 0.5, y: 0),
+                endPoint: UnitPoint(x: 0.5, y: 1)
+            )
+            .ignoresSafeArea() // Ensures the gradient fills the entire screen
+        )
+        .navigationBarBackButtonHidden(true)
     }
 }
 

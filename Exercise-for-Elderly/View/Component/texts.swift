@@ -7,8 +7,8 @@
 
 import Foundation
 
-let createTitle = "Code Created!"
-let createDesc = "Share the excitement by showing this code to your friends so they can join you on your run."
+let createTitle = "Kode Telah Dibuat!"
+let createDesc = "Bagikan kode ini dengan menunjukkan kepada teman Anda untuk bergabung ke dalam sesi olahraga."
 
-let joinTitle = "Join Your Friend!"
-let joinDesc = "Input the unique invite code from your friend’s device into the field above."
+let joinTitle = "Masukkan Kode yang Diberikan!"
+let joinDesc = "Masukkan kode yang diberikan oleh teman Anda untuk bergabung ke dalam sesi olahraga."
